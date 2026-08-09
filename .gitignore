@@ -1,0 +1,15 @@
+.venv/
+.env
+__pycache__/
+*.py[cod]
+*.db
+*.db-wal
+*.db-shm
+*.db.lock
+.DS_Store
+
+# Парсинг — локальные данные, не в git
+output/
+storage/
+data/
+backups/
