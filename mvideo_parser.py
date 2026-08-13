@@ -37,6 +37,7 @@ from common import (
     download_images,
     export_products,
     rate_limit_delay,
+    setup_logging,
 )
 from normalizer.content_filters import clean_html_description, is_review_media_url
 
@@ -59,11 +60,7 @@ INITIAL_RETRY_DELAY_SECONDS = 30
 MAX_RETRY_DELAY_SECONDS = 300
 CATEGORY_CACHE_TTL_HOURS = 24
 
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s [%(levelname)s] %(message)s",
-    datefmt="%H:%M:%S",
-)
+setup_logging()
 logger = logging.getLogger("mvideo_scraper")
 
 _stealth_helper = None
@@ -258,9 +255,15 @@ class CheckpointState:
         return set(self.completed_ids)
 
     def add_row(self, row: dict[str, Any]) -> None:
+        self.upsert_row(row)
+
+    def upsert_row(self, row: dict[str, Any]) -> None:
         product_id = str(row["product_id"])
-        if product_id in self.completed_set:
-            return
+        row.pop("details_error", None)
+        for index, existing in enumerate(self.rows):
+            if str(existing.get("product_id")) == product_id:
+                self.rows[index] = row
+                return
         self.completed_ids.append(product_id)
         self.rows.append(row)
 
@@ -296,6 +299,83 @@ class CheckpointState:
             pending=payload.get("pending", []),
             rows=rows,
         )
+
+
+def row_needs_detail_retry(row: dict[str, Any]) -> bool:
+    if row.get("details_error"):
+        return True
+    if str(row.get("description") or "").strip():
+        return False
+    spec_count = row.get("spec_count")
+    if spec_count is not None and int(spec_count) > 0:
+        return False
+    if str(row.get("characteristics") or "").strip():
+        return False
+    return True
+
+
+def slug_from_product_row(row: dict[str, Any]) -> str:
+    url = str(row.get("url") or "")
+    if "mvideo.ru" in url:
+        from urllib.parse import urlparse
+
+        path = urlparse(url).path
+        if path.startswith("/"):
+            return path
+    product_id = str(row.get("product_id") or "").strip()
+    return f"/products/{product_id}" if product_id else ""
+
+
+def images_from_product_row(row: dict[str, Any]) -> list[str]:
+    photos = row.get("photos") or row.get("photo_urls") or ""
+    if isinstance(photos, list):
+        return [str(url).strip() for url in photos if str(url).strip()]
+    return [part.strip() for part in str(photos).split("|") if part.strip()]
+
+
+def row_to_list_item(row: dict[str, Any]) -> ProductListItem:
+    return ProductListItem(
+        product_id=str(row["product_id"]),
+        name=str(row.get("name") or ""),
+        slug=slug_from_product_row(row),
+        sale_price=row.get("sale_price"),
+        base_price=row.get("base_price"),
+        discount=row.get("discount_percent") if "discount_percent" in row else row.get("discount"),
+        brand=row.get("brand"),
+        rating_count=row.get("rating_count"),
+        rating_star=row.get("rating_star"),
+        status=row.get("status"),
+        images=images_from_product_row(row),
+        category_id=str(row.get("category_id") or ""),
+        category_name=str(row.get("category_name") or ""),
+        category_path=str(row.get("category_path") or ""),
+    )
+
+
+def requeue_failed_details_in_checkpoint(checkpoint: CheckpointState) -> int:
+    pending_ids = {str(item.get("product_id")) for item in checkpoint.pending}
+    requeued = 0
+    kept_rows: list[dict[str, Any]] = []
+    for row in checkpoint.rows:
+        product_id = str(row.get("product_id") or "").strip()
+        if not product_id:
+            kept_rows.append(row)
+            continue
+        if not row_needs_detail_retry(row):
+            kept_rows.append(row)
+            continue
+        if product_id in pending_ids:
+            continue
+        checkpoint.pending.append(row_to_list_item(row).to_dict())
+        pending_ids.add(product_id)
+        if product_id in checkpoint.completed_ids:
+            checkpoint.completed_ids.remove(product_id)
+        requeued += 1
+    checkpoint.rows = kept_rows
+    checkpoint.completed_ids = [
+        str(row["product_id"]) for row in kept_rows if str(row.get("product_id") or "").strip()
+    ]
+    return requeued
 
 
 # ---------------------------------------------------------------------------
@@ -712,32 +792,6 @@ class MvideoApiClient:
             return relative_path
         return IMAGE_BASE_URL + relative_path.lstrip("/")
 
-
-def parse_list_product_item(raw: dict[str, Any], category_id: str) -> ProductListItem | None:
-    product_id = str(raw.get("productId") or "").strip()
-    if not is_valid_product_id(product_id):
-        logger.warning(
-            "MVideo list item skipped: category_id=%s reason=empty productId",
-            category_id,
-        )
-        return None
-    price = raw.get("price") or {}
-    rating = raw.get("rating") or {}
-    return ProductListItem(
-        product_id=product_id,
-        name=raw.get("name", ""),
-        slug=raw.get("slug", ""),
-        sale_price=price.get("salePrice"),
-        base_price=price.get("basePrice"),
-        discount=price.get("discount"),
-        brand=raw.get("brandName"),
-        rating_count=rating.get("count"),
-        rating_star=rating.get("star"),
-        status=raw.get("status"),
-        images=[MvideoApiClient.image_url(img) for img in raw.get("images", [])],
-        category_id=category_id,
-    )
-
     @staticmethod
     def collect_image_urls(details: dict[str, Any]) -> list[str]:
         candidates: list[str] = []
@@ -776,6 +830,32 @@ def parse_list_product_item(raw: dict[str, Any], category_id: str) -> ProductLis
                 key = f"{group_name} | {prop.get('name', '')}".strip(" |")
                 flat[key] = str(prop.get("value", ""))
         return flat
+
+
+def parse_list_product_item(raw: dict[str, Any], category_id: str) -> ProductListItem | None:
+    product_id = str(raw.get("productId") or "").strip()
+    if not is_valid_product_id(product_id):
+        logger.warning(
+            "MVideo list item skipped: category_id=%s reason=empty productId",
+            category_id,
+        )
+        return None
+    price = raw.get("price") or {}
+    rating = raw.get("rating") or {}
+    return ProductListItem(
+        product_id=product_id,
+        name=raw.get("name", ""),
+        slug=raw.get("slug", ""),
+        sale_price=price.get("salePrice"),
+        base_price=price.get("basePrice"),
+        discount=price.get("discount"),
+        brand=raw.get("brandName"),
+        rating_count=rating.get("count"),
+        rating_star=rating.get("star"),
+        status=raw.get("status"),
+        images=[MvideoApiClient.image_url(img) for img in raw.get("images", [])],
+        category_id=category_id,
+    )
 
 
 async def fetch_product_details(
@@ -1097,11 +1177,13 @@ class MvideoScraper:
         cat_dir: Path | None = None,
         download_images_flag: bool = True,
         rate_limiter: DomainRateLimiter | None = None,
+        details_only: bool = False,
     ):
         self.list_client = list_client
         self.worker_pool = worker_pool
         self.checkpoint = checkpoint
         self.fetch_details = fetch_details
+        self.details_only = details_only
         self.save_every = save_every
         self.http = http_session
         self.cat_dir = cat_dir
@@ -1141,7 +1223,16 @@ class MvideoScraper:
             self.checkpoint.pending = []
             self.checkpoint.completed_ids = []
             self.checkpoint.rows = []
-        await self._collect_product_list(self.checkpoint.category, max_products, checkpoint_path, output_path)
+        if self.details_only and self.checkpoint.category:
+            self.checkpoint.category.list_complete = True
+            logger.info(
+                "Details-only: пропуск listing, очередь %s",
+                len(self.checkpoint.pending),
+            )
+        elif not self.details_only:
+            await self._collect_product_list(self.checkpoint.category, max_products, checkpoint_path, output_path)
+        elif self.checkpoint.category and self.checkpoint.category.list_complete:
+            logger.info("Details-only: listing уже собран, очередь %s", len(self.checkpoint.pending))
         await self._process_pending_details(max_products, checkpoint_path, output_path)
         summary = {
             "discovered_urls": self.discovered_urls,
@@ -1255,7 +1346,7 @@ class MvideoScraper:
                     if item.images:
                         row["photo_urls"] = item.images
                     await self._finalize_row(row, item)
-                    self.checkpoint.add_row(row)
+                    self.checkpoint.upsert_row(row)
                     self.processed += 1
                 else:
                     self.skipped += 1
@@ -1297,14 +1388,20 @@ class MvideoScraper:
                     )
                     blocked.append(item)
                 elif isinstance(result, Exception):
+                    logger.warning(
+                        "MVideo detail failed product_id=%s slug=%s: %s",
+                        item.product_id,
+                        item.slug,
+                        result,
+                    )
                     row = build_base_row(item)
                     row["details_error"] = str(result)
                     await self._finalize_row(row, item)
-                    self.checkpoint.add_row(row)
+                    self.checkpoint.upsert_row(row)
                     self.failed += 1
                 else:
                     await self._finalize_row(result, item)
-                    self.checkpoint.add_row(result)
+                    self.checkpoint.upsert_row(result)
                     self.processed += 1
             self._persist(checkpoint_path, output_path)
             if blocked:
@@ -1629,7 +1726,11 @@ async def scrape_once(args: argparse.Namespace, *, retry_attempt: int = 1) -> Pa
                 total_failed = 0
                 for index, category in enumerate(categories, 1):
                     cat_key = str(category.seo_id)
-                    if cat_key in completed_categories:
+                    if (
+                        cat_key in completed_categories
+                        and not args.details_only
+                        and not args.retry_details_errors
+                    ):
                         logger.info("Пропуск (готово): %s", category.path)
                         continue
                     if cat_key in needs_recheck_categories and not is_403_recheck_ready(global_cp, cat_key):
@@ -1660,6 +1761,25 @@ async def scrape_once(args: argparse.Namespace, *, retry_attempt: int = 1) -> Pa
                             len(checkpoint.pending),
                         )
 
+                    if args.retry_details_errors or args.details_only:
+                        requeued = requeue_failed_details_in_checkpoint(checkpoint)
+                        if requeued:
+                            logger.info(
+                                "Requeued %s products for detail retry: %s",
+                                requeued,
+                                category.path,
+                            )
+                        if cat_key in completed_categories and checkpoint.pending:
+                            completed_categories.discard(cat_key)
+                            logger.info(
+                                "Re-open completed category for pending details: %s",
+                                category.path,
+                            )
+
+                    if args.details_only and not checkpoint.pending:
+                        logger.info("Details-only skip (nothing pending): %s", category.path)
+                        continue
+
                     scraper = MvideoScraper(
                         list_client,
                         worker_pool,
@@ -1670,6 +1790,7 @@ async def scrape_once(args: argparse.Namespace, *, retry_attempt: int = 1) -> Pa
                         download_images_flag=not args.skip_images,
                         category_delay=args.category_delay,
                         rate_limiter=rate_limiter,
+                        details_only=args.details_only,
                     )
                     logger.info("[%s/%s] %s (id=%s)", index, len(categories), category.path, category.seo_id)
 
@@ -1817,6 +1938,14 @@ async def scrape_once(args: argparse.Namespace, *, retry_attempt: int = 1) -> Pa
                     cp_path = cat_dir / "checkpoint.json"
                     out_path = cat_dir / "products.xlsx"
                     checkpoint = CheckpointState.load(cp_path) or CheckpointState(output=str(out_path))
+                    if args.retry_details_errors or args.details_only:
+                        requeued = requeue_failed_details_in_checkpoint(checkpoint)
+                        if requeued:
+                            logger.info(
+                                "Requeued %s products for detail retry (recheck): %s",
+                                requeued,
+                                category.path,
+                            )
                     scraper = MvideoScraper(
                         list_client,
                         worker_pool,
@@ -1827,6 +1956,7 @@ async def scrape_once(args: argparse.Namespace, *, retry_attempt: int = 1) -> Pa
                         download_images_flag=not args.skip_images,
                         category_delay=args.category_delay,
                         rate_limiter=rate_limiter,
+                        details_only=args.details_only,
                     )
                     logger.info("MVideo deferred recheck: category=%s", category.path)
                     recheck_block_handler = CategoryBlockHandler(fast_defer_config)
@@ -1951,6 +2081,7 @@ def parse_args() -> argparse.Namespace:
   python mvideo_parser.py --category 1263 --category-slug monitory -o monitory.xlsx
   python mvideo_parser.py --category 118 --category-slug noutbuki --limit 10
   python mvideo_parser.py --skip-details --category 1263 --category-slug monitory
+  python mvideo_parser.py --details-only --retry-details-errors -o output/mvideo
         """,
     )
     parser.add_argument("-o", "--output", default=DEFAULT_OUTPUT)
@@ -1959,6 +2090,16 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--limit", type=int, help="Лимит товаров на категорию")
     parser.add_argument("--max-categories", type=int)
     parser.add_argument("--skip-details", action="store_true", help="Без характеристик (быстрее)")
+    parser.add_argument(
+        "--details-only",
+        action="store_true",
+        help="Только detail-этап: без listing, обработка pending и retry",
+    )
+    parser.add_argument(
+        "--retry-details-errors",
+        action="store_true",
+        help="Перепоставить в очередь товары без описания/details_error",
+    )
     parser.add_argument("--skip-images", action="store_true", help="Не скачивать картинки")
     parser.add_argument("--workers", type=int, default=DEFAULT_WORKERS)
     parser.add_argument("--delay", type=float, default=REQUEST_DELAY_SECONDS,
@@ -1971,6 +2112,8 @@ def parse_args() -> argparse.Namespace:
 
 def main() -> None:
     args = parse_args()
+    if args.skip_details and args.details_only:
+        raise SystemExit("Нельзя совмещать --skip-details и --details-only")
     from parser_policy import apply_mvideo_policy
 
     apply_mvideo_policy(args)

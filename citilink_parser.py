@@ -35,6 +35,7 @@ from common import (
     download_images,
     export_products,
     rate_limit_delay,
+    setup_logging,
 )
 from db.hooks import persist_citilink_row
 from normalizer.content_filters import clean_html_description, clean_review_noise
@@ -56,7 +57,7 @@ LISTING_POLL_ATTEMPTS = 25
 PRODUCT_POLL_ATTEMPTS = 25
 FULL_SPEC_MIN_FIELDS = 15
 
-logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s", datefmt="%H:%M:%S")
+setup_logging()
 logger = logging.getLogger("citilink_scraper")
 
 EXTRACT_LISTING_JS = """
@@ -209,10 +210,55 @@ class CitilinkCategory:
     name: str
     path: str = ""
     url: str = ""
+    product_count: int | None = None
 
     @property
     def cat_key(self) -> str:
         return f"{self.category_id}|{self.slug}"
+
+
+def listed_count(checkpoint: GlobalCheckpoint) -> int:
+    return len(checkpoint.completed_set) + len(checkpoint.pending)
+
+
+def is_category_complete(
+    checkpoint: GlobalCheckpoint,
+    *,
+    max_products: int | None = None,
+    expected_total: int | None = None,
+) -> bool:
+    cat = checkpoint.category
+    if not cat or not cat.list_complete:
+        return False
+    if checkpoint.pending:
+        return False
+    processed = len(checkpoint.completed_set)
+    listed = listed_count(checkpoint)
+    if max_products is not None:
+        return processed >= max_products
+    if expected_total is not None and expected_total > 0:
+        return listed >= expected_total and processed >= expected_total
+    return processed > 0
+
+
+def reopen_incomplete_listing(
+    checkpoint: GlobalCheckpoint,
+    *,
+    max_products: int | None = None,
+    expected_total: int | None = None,
+) -> bool:
+    """Reset list_complete when listing ended early (limit, bad pagination, partial run)."""
+    cat = checkpoint.category
+    if not cat or not cat.list_complete:
+        return False
+    listed = listed_count(checkpoint)
+    if max_products is not None and listed < max_products:
+        cat.list_complete = False
+        return True
+    if expected_total is not None and expected_total > 0 and listed < expected_total:
+        cat.list_complete = False
+        return True
+    return False
 
 
 def parse_product_id_from_url(url: str) -> str:
@@ -607,7 +653,6 @@ class CitilinkScraper:
 
         while not list_complete:
             if max_products and len(collected) >= max_products:
-                list_complete = True
                 break
 
             url = category_url(category.slug, page=page_num)
@@ -668,20 +713,20 @@ class CitilinkScraper:
             )
 
             if max_products and len(collected) >= max_products:
-                list_complete = True
                 break
 
-            if total is not None and page_num * per_page >= int(total):
+            if total is not None and len(collected) >= int(total):
                 list_complete = True
                 break
-            if len(products) < max(1, per_page // 2):
+            if new_count == 0:
                 list_complete = True
                 break
 
             page_num += 1
             cat_state.list_page = page_num
 
-        cat_state.list_complete = list_complete
+        if not (max_products and len(collected) >= max_products):
+            cat_state.list_complete = list_complete
 
     async def _goto_properties_safe(self, url: str) -> None:
         await self.rate_limiter.wait()
@@ -856,9 +901,19 @@ class CitilinkScraper:
                 self.checkpoint.completed_ids = []
 
         cat_state = self.checkpoint.category
-        if cat_state.list_complete and not self.checkpoint.pending and not self.checkpoint.rows:
-            cat_state.list_complete = False
-            cat_state.list_page = 1
+        expected_total = category.product_count
+        if reopen_incomplete_listing(
+            self.checkpoint,
+            max_products=max_products,
+            expected_total=expected_total,
+        ):
+            logger.info(
+                "Citilink reopen listing %s: processed=%s expected=%s list_page=%s",
+                category.slug,
+                len(self.checkpoint.completed_set),
+                expected_total,
+                cat_state.list_page,
+            )
         if not cat_state.list_complete:
             await self.scrape_category_listing(category, max_products=max_products, cat_state=cat_state)
             self.checkpoint.save(checkpoint_path)
@@ -919,6 +974,56 @@ def load_respec_items(limit: int | None = None) -> list[dict[str, Any]]:
     return items
 
 
+def load_categories_from_manifest(manifest_path: Path) -> list[CitilinkCategory]:
+    payload = json.loads(manifest_path.read_text(encoding="utf-8"))
+    raw_items = payload.get("categories") if isinstance(payload, dict) else payload
+    if not isinstance(raw_items, list):
+        raise SystemExit(f"Invalid manifest (no categories list): {manifest_path}")
+
+    categories: list[CitilinkCategory] = []
+    sort_keys: list[tuple[int, str, str]] = []
+    for item in raw_items:
+        if not isinstance(item, dict):
+            continue
+        slug = str(item.get("slug") or "").strip()
+        if not slug:
+            continue
+        category_id = str(item.get("category_id") or "").strip()
+        name = str(item.get("name") or slug.replace("-", " ")).strip()
+        path = str(item.get("category_path") or item.get("path") or name).strip()
+        url = str(item.get("category_url") or category_url(slug)).strip()
+        try:
+            priority = int(item.get("priority") or 9999)
+        except (TypeError, ValueError):
+            priority = 9999
+        try:
+            product_count = int(item.get("product_count") or 0) or None
+        except (TypeError, ValueError):
+            product_count = None
+        categories.append(
+            CitilinkCategory(
+                category_id=category_id,
+                slug=slug,
+                name=name,
+                path=path,
+                url=url,
+                product_count=product_count,
+            )
+        )
+        sort_keys.append((priority, path, slug))
+
+    if not categories:
+        raise SystemExit(f"No categories in manifest: {manifest_path}")
+
+    categories = [c for _, c in sorted(zip(sort_keys, categories), key=lambda pair: pair[0])]
+    return categories
+
+
+def citilink_profile_dir(output_root: Path, suffix: str) -> str:
+    """Separate browser profile dir (avoid lock with discovery/default profile)."""
+    return str(output_root / f".browser_profile{suffix}")
+
+
 async def scrape_once(args: argparse.Namespace) -> dict[str, int]:
     output_root = Path(args.output)
     output_root.mkdir(parents=True, exist_ok=True)
@@ -929,10 +1034,11 @@ async def scrape_once(args: argparse.Namespace) -> dict[str, int]:
         global_cp = json.loads(global_cp_path.read_text(encoding="utf-8"))
     completed_categories: set[str] = set(global_cp.get("completed_categories", []))
 
-    stats = {"failed": 0, "deferred": 0}
+    stats = {"failed": 0, "deferred": 0, "incomplete": 0}
 
     async with aiohttp.ClientSession(headers={"User-Agent": "Mozilla/5.0"}) as http:
-        profile = str(output_root / ".browser_profile")
+        profile = citilink_profile_dir(output_root, args.profile_suffix)
+        logger.info("Citilink browser profile: %s (headless=%s)", profile, args.headless)
         async with CloakSession(headless=args.headless, humanize=True, profile_dir=profile) as session:
             page = await session.new_page()
             rate_limiter = DomainRateLimiter(args.delay)
@@ -946,24 +1052,37 @@ async def scrape_once(args: argparse.Namespace) -> dict[str, int]:
                 category_delay=args.category_delay,
             )
 
-            if not args.category_slug and not args.respec:
-                raise SystemExit("Citilink parser requires --category-slug (e.g. noutbuki) or --respec")
-
-            categories = [
-                CitilinkCategory(
-                    category_id=str(args.category or ""),
-                    slug=args.category_slug,
-                    name=args.category_name or args.category_slug.replace("-", " "),
-                    path=args.category_path or args.category_name or args.category_slug,
-                    url=category_url(args.category_slug),
+            if not args.category_slug and not args.respec and not args.manifest:
+                raise SystemExit(
+                    "Citilink parser requires --category-slug, --manifest, or --respec"
                 )
-            ]
+
+            if args.manifest:
+                categories = load_categories_from_manifest(Path(args.manifest))
+                logger.info("Loaded %s categories from manifest: %s", len(categories), args.manifest)
+            else:
+                expected = getattr(args, "expected_products", None)
+                categories = [
+                    CitilinkCategory(
+                        category_id=str(args.category or ""),
+                        slug=args.category_slug,
+                        name=args.category_name or args.category_slug.replace("-", " "),
+                        path=args.category_path or args.category_name or args.category_slug,
+                        url=category_url(args.category_slug),
+                        product_count=expected,
+                    )
+                ]
 
             if args.respec:
                 items = load_respec_items(args.limit)
                 if not items:
                     raise SystemExit("No citilink products in DB for --respec")
-                category = categories[0]
+                category = categories[0] if categories else CitilinkCategory(
+                    category_id=str(args.category or ""),
+                    slug=args.category_slug or "respec",
+                    name=args.category_name or "respec",
+                    path=args.category_path or "respec",
+                )
                 cat_dir = category_dir(
                     output_root,
                     category.path or category.name,
@@ -974,11 +1093,8 @@ async def scrape_once(args: argparse.Namespace) -> dict[str, int]:
                 stats["failed"] += scraper.failed
                 return stats
 
+            run_aborted = False
             for index, category in enumerate(categories, 1):
-                if category.cat_key in completed_categories:
-                    logger.info("Skip completed category: %s", category.slug)
-                    continue
-
                 cat_dir = category_dir(
                     output_root,
                     category.path or category.name,
@@ -988,6 +1104,23 @@ async def scrape_once(args: argparse.Namespace) -> dict[str, int]:
                 checkpoint = GlobalCheckpoint.load(cp_path)
                 if checkpoint is None:
                     checkpoint = GlobalCheckpoint(shop="citilink", output_root=str(output_root))
+
+                if category.cat_key in completed_categories:
+                    if is_category_complete(
+                        checkpoint,
+                        max_products=args.limit,
+                        expected_total=category.product_count,
+                    ):
+                        logger.info("Skip completed category: %s", category.slug)
+                        continue
+                    completed_categories.discard(category.cat_key)
+                    logger.info(
+                        "Re-open incomplete completed category: %s (pending=%s processed=%s expected=%s)",
+                        category.slug,
+                        len(checkpoint.pending),
+                        len(checkpoint.completed_set),
+                        category.product_count,
+                    )
 
                 scraper.checkpoint = checkpoint
                 scraper.failed = 0
@@ -1010,39 +1143,54 @@ async def scrape_once(args: argparse.Namespace) -> dict[str, int]:
                             export_products(checkpoint.rows, cat_dir / "products.xlsx")
                         if not await cat_backoff.wait_before_retry():
                             stats["deferred"] += 1
-                            logger.error("Category deferred after blocks: %s (%s)", category.slug, exc)
+                            stats["incomplete"] += 1
+                            logger.error(
+                                "Category deferred after blocks: %s (%s) — stopping run",
+                                category.slug,
+                                exc,
+                            )
+                            run_aborted = True
                             break
                         logger.info("Retry category %s after backoff", category.slug)
 
                 stats["failed"] += scraper.failed
+                if run_aborted:
+                    global_cp["completed_categories"] = sorted(completed_categories)
+                    atomic_write_json(global_cp_path, global_cp)
+                    break
+
                 processed = len(checkpoint.completed_set)
-                if category_done and args.limit:
-                    cat_state = checkpoint.category
-                    if cat_state and not cat_state.list_complete:
-                        logger.warning(
-                            "Category %s partial run (%s products, limit=%s, list_complete=false) — not marking complete",
-                            category.slug,
-                            processed,
-                            args.limit,
-                        )
-                        category_done = False
-                if category_done and args.limit and processed < args.limit and checkpoint.pending:
-                    logger.warning(
-                        "Category %s finished with %s/%s products — not marking complete",
-                        category.slug,
-                        processed,
-                        args.limit,
-                    )
-                    category_done = False
-                if category_done and processed > 0 and (
-                    not args.limit or (checkpoint.category and checkpoint.category.list_complete)
-                ):
+                fully_complete = is_category_complete(
+                    checkpoint,
+                    max_products=args.limit,
+                    expected_total=category.product_count,
+                )
+                if fully_complete:
                     completed_categories.add(category.cat_key)
                     global_cp["completed_categories"] = sorted(completed_categories)
                     atomic_write_json(global_cp_path, global_cp)
-                    logger.info("Category done: %s -> %s (%s products)", category.slug, cat_dir, processed)
-                elif category_done:
-                    logger.info("Category scraped: %s -> %s (%s products)", category.slug, cat_dir, processed)
+                    logger.info(
+                        "Category done: %s -> %s (listed=%s processed=%s pages=%s)",
+                        category.slug,
+                        cat_dir,
+                        listed_count(checkpoint),
+                        processed,
+                        checkpoint.category.list_page if checkpoint.category else "?",
+                    )
+                else:
+                    stats["incomplete"] += 1
+                    cat_state = checkpoint.category
+                    logger.warning(
+                        "Category incomplete: %s listed=%s processed=%s pending=%s "
+                        "list_complete=%s list_page=%s expected=%s",
+                        category.slug,
+                        listed_count(checkpoint),
+                        processed,
+                        len(checkpoint.pending),
+                        cat_state.list_complete if cat_state else False,
+                        cat_state.list_page if cat_state else "?",
+                        category.product_count,
+                    )
 
                 if index < len(categories):
                     await rate_limit_delay(args.category_delay)
@@ -1064,13 +1212,24 @@ async def run_with_retries(args: argparse.Namespace) -> dict[str, int]:
 def parse_args() -> argparse.Namespace:
     p = argparse.ArgumentParser(description="Парсер citilink.ru")
     p.add_argument("-o", "--output", default=DEFAULT_OUTPUT)
+    p.add_argument("--manifest", help="JSON manifest with categories to scrape sequentially")
     p.add_argument("--category", help="ID категории (numeric, optional)")
-    p.add_argument("--category-slug", required=True, help="SEO slug категории, напр. noutbuki")
+    p.add_argument("--category-slug", help="SEO slug категории, напр. noutbuki")
     p.add_argument("--category-name", default="", help="Название категории")
     p.add_argument("--category-path", default="", help="Путь категории")
     p.add_argument("--limit", type=int, help="Лимит товаров на категорию")
+    p.add_argument(
+        "--expected-products",
+        type=int,
+        help="Ожидаемое число товаров в категории (для --category-slug smoke/full run)",
+    )
     p.add_argument("--respec", action="store_true", help="Пересканировать характеристики существующих товаров citilink из БД")
     p.add_argument("--skip-images", action="store_true")
+    p.add_argument(
+        "--profile-suffix",
+        default="_run",
+        help="Browser profile suffix (dir: .browser_profile{suffix}, default: _run)",
+    )
     p.add_argument("--headless", action=argparse.BooleanOptionalAction, default=False)
     p.add_argument("--delay", type=float, default=4.0)
     p.add_argument("--category-delay", type=float, default=20.0)
@@ -1079,10 +1238,19 @@ def parse_args() -> argparse.Namespace:
 
 
 def main() -> None:
+    import sys
+
     args = parse_args()
     apply_citilink_policy(args)
     stats = asyncio.run(run_with_retries(args))
-    logger.info("Citilink run finished: failed=%s deferred=%s", stats.get("failed"), stats.get("deferred"))
+    logger.info(
+        "Citilink run finished: failed=%s deferred=%s incomplete=%s",
+        stats.get("failed"),
+        stats.get("deferred"),
+        stats.get("incomplete"),
+    )
+    if stats.get("deferred") or stats.get("incomplete"):
+        sys.exit(1)
 
 
 if __name__ == "__main__":

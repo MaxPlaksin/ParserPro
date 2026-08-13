@@ -21,6 +21,11 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 LOG_DIR = PROJECT_ROOT / "logs"
 ENV_PATH = PROJECT_ROOT / ".env"
 
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
+
+from common import configure_console_utf8
+
 BACKOFF_STEPS_SEC = (15, 30, 60, 120, 300)
 STABLE_RUN_RESET_SEC = 600
 ALERT_COOLDOWN_SEC = 900
@@ -55,18 +60,6 @@ def _load_env() -> None:
             value = value.strip().strip('"').strip("'")
             if key and key not in os.environ:
                 os.environ[key] = value
-
-
-def _configure_stdio_utf8() -> None:
-    """Use UTF-8 for supervisor console output (Windows defaults to cp1251)."""
-    for stream in (sys.stdout, sys.stderr):
-        reconfigure = getattr(stream, "reconfigure", None)
-        if reconfigure is None:
-            continue
-        try:
-            reconfigure(encoding="utf-8", errors="replace")
-        except (OSError, ValueError):
-            pass
 
 
 def _child_env() -> dict[str, str]:
@@ -473,7 +466,7 @@ def _test_telegram() -> int:
 
 
 def main() -> None:
-    _configure_stdio_utf8()
+    configure_console_utf8()
     _load_env()
     args, command = _parse_args(sys.argv)
 

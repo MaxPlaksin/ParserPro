@@ -41,6 +41,7 @@ from common import (
     export_products,
     rate_limit_delay,
     safe_name,
+    setup_logging,
 )
 from normalizer.content_filters import clean_review_noise, is_skipped_product_path
 from normalizer.structured import build_description_full, pick_spec_value
@@ -62,7 +63,7 @@ INITIAL_RETRY_DELAY = 30
 MAX_RETRY_DELAY = 300
 DEFAULT_OUTPUT = "output/dns"
 
-logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s", datefmt="%H:%M:%S")
+setup_logging()
 logger = logging.getLogger("dns_scraper")
 
 PRODUCT_LINK_RE = re.compile(r'href="(/product/[a-f0-9]{16}/[^"?#]+)"')

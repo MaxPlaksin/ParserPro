@@ -8,6 +8,7 @@ import logging
 import os
 import random
 import re
+import sys
 from dataclasses import asdict, dataclass, field
 from pathlib import Path
 from typing import Any
@@ -17,6 +18,70 @@ import aiohttp
 import pandas as pd
 
 logger = logging.getLogger(__name__)
+
+
+def configure_console_utf8() -> None:
+    """Use UTF-8 for console I/O (Windows defaults to legacy code pages)."""
+    if sys.platform == "win32":
+        try:
+            import ctypes
+
+            kernel32 = ctypes.windll.kernel32  # type: ignore[attr-defined]
+            kernel32.SetConsoleOutputCP(65001)
+            kernel32.SetConsoleCP(65001)
+        except (AttributeError, OSError):
+            pass
+    for stream in (sys.stdout, sys.stderr):
+        reconfigure = getattr(stream, "reconfigure", None)
+        if reconfigure is None:
+            continue
+        try:
+            reconfigure(encoding="utf-8", errors="replace")
+        except (OSError, ValueError):
+            pass
+
+
+class UTF8LogStreamHandler(logging.StreamHandler):
+    """Write UTF-8 bytes to the stream buffer (avoids Windows code-page issues)."""
+
+    def emit(self, record: logging.LogRecord) -> None:
+        try:
+            msg = self.format(record)
+            stream = self.stream
+            buffer = getattr(stream, "buffer", None)
+            if buffer is not None:
+                buffer.write(msg.encode("utf-8", errors="replace"))
+                buffer.write(b"\n")
+                buffer.flush()
+            else:
+                stream.write(msg + "\n")
+                self.flush()
+        except Exception:
+            self.handleError(record)
+
+
+def setup_logging(
+    *,
+    level: int = logging.INFO,
+    fmt: str = "%(asctime)s [%(levelname)s] %(message)s",
+    datefmt: str = "%H:%M:%S",
+    force: bool = False,
+) -> None:
+    """Configure root logger with UTF-8-safe console output."""
+    configure_console_utf8()
+    root = logging.getLogger()
+    if root.handlers and not force:
+        return
+    root.handlers.clear()
+    # PowerShell treats stderr as ErrorRecord and mangles encoding on redirect.
+    log_stream = sys.stdout if sys.platform == "win32" else sys.stderr
+    if sys.platform == "win32":
+        handler: logging.Handler = UTF8LogStreamHandler(log_stream)
+    else:
+        handler = logging.StreamHandler(log_stream)
+    handler.setFormatter(logging.Formatter(fmt, datefmt=datefmt))
+    root.addHandler(handler)
+    root.setLevel(level)
 
 # Rate limiting (сек) — центр диапазона; jitter ±25% даёт нужный коридор
 DEFAULT_REQUEST_DELAY = 4.0       # М.Видео ~3–5 сек между page/API запросами

@@ -38,6 +38,7 @@ from common import (
     export_products,
     rate_limit_delay,
     safe_name,
+    setup_logging,
 )
 from db.hooks import persist_regard_row
 from normalizer.content_filters import clean_html_description, clean_review_noise
@@ -54,7 +55,7 @@ SAVE_EVERY_N_ROWS = 5
 BLOCKED_STATUS_CODES = {403, 429}
 IMAGE_SIZE = 1200
 
-logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s", datefmt="%H:%M:%S")
+setup_logging()
 logger = logging.getLogger("regard_scraper")
 
 EXTRACT_LISTING_JS = """
