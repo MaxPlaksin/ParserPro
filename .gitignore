@@ -3,6 +3,7 @@
 __pycache__/
 *.py[cod]
 *.db
+!data/products.db
 *.db-wal
 *.db-shm
 *.db.lock
@@ -11,5 +12,6 @@ __pycache__/
 # Парсинг — локальные данные, не в git
 output/
 storage/
-data/
+data/*
+!data/products.db
 backups/
