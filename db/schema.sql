@@ -81,3 +81,22 @@ CREATE TABLE IF NOT EXISTS price_history (
 );
 
 CREATE INDEX IF NOT EXISTS idx_price_history_product ON price_history(product_id, recorded_at DESC);
+
+CREATE TABLE IF NOT EXISTS catalog_sections (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    source TEXT NOT NULL DEFAULT 'petrovich',
+    section_code TEXT NOT NULL,
+    parent_section_code TEXT,
+    name TEXT NOT NULL,
+    path TEXT NOT NULL,
+    url TEXT NOT NULL,
+    kind TEXT NOT NULL DEFAULT 'section',
+    depth INTEGER NOT NULL DEFAULT 0,
+    product_qty INTEGER,
+    created_at TEXT NOT NULL,
+    updated_at TEXT NOT NULL,
+    UNIQUE(source, section_code)
+);
+
+CREATE INDEX IF NOT EXISTS idx_catalog_sections_parent ON catalog_sections(source, parent_section_code);
+CREATE INDEX IF NOT EXISTS idx_catalog_sections_kind ON catalog_sections(source, kind);

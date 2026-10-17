@@ -1,0 +1,235 @@
+{
+  "keys": [
+    "pdp",
+    "router",
+    "host",
+    "isBot",
+    "deviceType",
+    "env",
+    "userAgent",
+    "cookie",
+    "cookieParsed",
+    "layers",
+    "errorsHook",
+    "experimentsUUID"
+  ],
+  "tree": {
+    "pdp": {
+      "pageModel": {
+        "model": null,
+        "loading": null,
+        "error": null
+      },
+      "linkedPages": {
+        "data": null,
+        "loading": null,
+        "error": null
+      },
+      "product": {
+        "mainInfoloading": null,
+        "mainInfoError": null,
+        "info": null,
+        "mediaLoading": null,
+        "mediaError": null,
+        "media": null,
+        "variantsLoading": null,
+        "variantsError": null,
+        "variants": null,
+        "merchant": null,
+        "merchantError": null,
+        "merchantLoading": null,
+        "tintService": null,
+        "calculatorParameters": null,
+        "calculatorParametersError": null,
+        "calculatorParametersLoading": null
+      },
+      "basket": null,
+      "measurementSettings": null,
+      "pdpNavigation": {
+        "context": null,
+        "sectionMetas": null
+      },
+      "goodsSupply": {
+        "goodsSupplyData": null,
+        "isLoading": null,
+        "error": null,
+        "supplyCase": null
+      },
+      "reviews": {
+        "reviews": null,
+        "reviewsError": null,
+        "reviewsLoading": null,
+        "reviewsSorting": null,
+        "reviewsGroup": null,
+        "reviewsFilters": null,
+        "pagination": null,
+        "paginationLastPageError": null,
+        "paginationPageIsLoading": null,
+        "photosModal": null,
+        "opinions": null,
+        "postReview": null,
+        "selectedPhotos": null,
+        "photosFileCache": null,
+        "isGroupRatings": null
+      },
+      "businesUnits": {
+        "regionsAndStores": null
+      },
+      "dataFetching": {
+        "inProgress": null,
+        "timeIsOut": null
+      },
+      "relatedProducts": {
+        "complements": null,
+        "substitutes": null,
+        "collection": null,
+        "collectionProducts": null,
+        "variants": null,
+        "set": null
+      },
+      "relatedServices": null,
+      "loyaltyRewards": {
+        "data": null,
+        "loyaltyRewardsError": null,
+        "loyaltyRewardsLoading": null
+      },
+      "productsCompareLists": {
+        "data": null,
+        "isLoading": null,
+        "error": null
+      },
+      "configurations": {
+        "laminate": null
+      },
+      "yandexSplit": {
+        "session": null
+      },
+      "reviewsPhotos": {
+        "reviewGallery": null,
+        "loading": null,
+        "error": null
+      },
+      "clientVerification": {
+        "customerNumber": null,
+        "status": null,
+        "error": null
+      },
+      "trustDocuments": {
+        "data": null,
+        "loading": null,
+        "error": null
+      }
+    },
+    "router": {
+      "search": "",
+      "path": "/product/stenovaya-panel-pvh-belyy-matovyy-3000x250x5-mm-075-m-81944895/",
+      "params": {},
+      "hash": ""
+    },
+    "host": "lemanapro.ru:443",
+    "isBot": false,
+    "deviceType": "desktop",
+    "env": {
+      "requestID": "aa087360514c34ddc4e116f59a1de75e",
+      "requestUrl": "/product/stenovaya-panel-pvh-belyy-matovyy-3000x250x5-mm-075-m-81944895/",
+      "API_KEY": "nkGKLkscp80GVAQVY8YvajPjzaFTmIS8",
+      "CDN_HOST": "cdn.lemanapro.ru",
+      "CLIENT_LOG_LEVEL": "error",
+      "EXPERIMENTS_DOMAIN": "",
+      "FLOWBOX_KEY": "8YP23ZQOQKaBE1sOq6Hwuw",
+      "LOG_LEVEL": "error",
+      "MEDIA_CLOUDINARY_CLOUD": "lmru",
+      "ORCHESTRATOR_BACKEND_HOST": "https://api.internal.lemanapro.ru:443/experience/LeroymerlinWebsite/v1/navigation-pdp-api/",
+      "ORCHESTRATOR_HOST": "https://api.lemanapro.ru:443/experience/LeroymerlinWebsite/v1/navigation-pdp-api/",
+      "ORCHESTRATOR_HOST_KZ": "https://api.lemanapro.kz:443/experience/LeroymerlinWebsite/v1/navigation-pdp-api/",
+      "PORT": 3000,
+      "PRODUCTS_COMPARE_LISTS_LIMIT": 10,
+      "PRODUCTS_COMPARE_LIST_LIMIT": 10,
+      "PRODUCTS_COMPARE_ORCHESTRATOR_BACKEND_HOST": "https://api.internal.lemanapro.ru:443/products-compare/v1/",
+      "PRODUCTS_COMPARE_ORCHESTRATOR_HOST": "https://api.lemanapro.ru:443/products-compare/v1/",
+      "PRODUCTS_COMPARE_ORCHESTRATOR_HOST_KZ": "https://api.lemanapro.kz:443/products-compare/v1/",
+      "REMOTE_TIMEOUT": 2000,
+      "ROBOTINT_CLIENT_ID": "76",
+      "ROBOTINT_LINK": "https://core.robotint.net",
+      "ROBOTINT_SECRET": "kw5oFPW8dOjGc6lG",
+      "SERVER_FETCH_DATA_TIMEOUT": 4000,
+      "SERVER_LOG_LEVEL": "error",
+      "USE_APPSFLYER": true,
+      "USE_CREDENTIALS": true,
+      "USE_GROUP_RATINGS": true,
+      "USE_REMOTES": true,
+      "USE_REVIEW_FORM_REMOTE": true,
+      "KAMELEOON_CLIENT_ID": "30041-marat-miftahov-lemanapro-ru",
+      "KAMELEOON_CLIENT_SECRET": "Nnhge5_b9bzAYpjBkotGIIbyotkG6oDehXg8LY-7Q28",
+      "KAMELEOON_SITE_CODE": "33d9nnan13",
+      "KAMELEOON_REQUEST_TIMEOUT": "300",
+      "KAMELEOON_ENABLED": "1",
+      "KAMELEOON_NETWORK_DOMAIN": "kameleoon.ru"
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+    "cookie": "qrator_jsr=v2.0.1791476351.336.5cff6c59T2SZE6sW|oN3fmUsoVsqGyuFs|KGMoa6XWf38Df2qg8UZJfZbnTpzerFet1m1krVB8SSWwQ+/WY4gPtuE",
+    "cookieParsed": {
+      "cookies": {
+        "qrator_jsr": null,
+        "qrator_jsid2": null,
+        "_frt_": null,
+        "advcake_track_id": null,
+        "advcake_session_id": null,
+        "lang": null,
+        "rm_session": null,
+        "cookie_accepted": null,
+        "_regionID": null,
+        "_userRegion": null,
+        "_ym_uid": null,
+        "_ym_d": null,
+        "st_uid": null,
+        "_ym_isad": null,
+        "___dmpkit___": null,
+        "uid_experiment": null,
+        "kameleoonVisitorCode": null,
+        "loyaltyTypePRO": null,
+        "tmr_lvidTS": null,
+        "tmr_lvid": null,
+        "ma_cid": null,
+        "uxs_uid": null,
+        "iap.uid": null,
+        "_kmb_ref": null,
+        "as-user": null,
+        "ma_id": null,
+        "adrcid": null,
+        "adrdel": null,
+        "domain_sid": null,
+        "acs_3": null,
+        "mdd": null,
+        "rai": null,
+        "tmr_detect": null,
+        "_sltm": null,
+        "_sltb": null,
+        "_ym_visorc": null,
+        "advcake_track_url": null,
+        "stretch-banner-count": null,
+        "stretch-banner-autohide": null,
+        "ma_ss_0ad8166e-9271-173c-8192-960ebcb9000a": null
+      }
+    },
+    "layers": {
+      "basket": {
+        "__array": 0,
+        "firstKeys": "undefined"
+      },
+      "comparison": {
+        "__array": 0,
+        "firstKeys": "undefined"
+      },
+      "shoppingList": {
+        "__array": 0,
+        "firstKeys": "undefined"
+      }
+    },
+    "errorsHook": {
+      "__array": 0,
+      "firstKeys": "undefined"
+    },
+    "experimentsUUID": "c4327006a6d5c99d83bdaf573022e5c7"
+  }
+}

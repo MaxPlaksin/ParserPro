@@ -1,0 +1,50 @@
+﻿15:34:11 [INFO] HTTP Request: GET https://pypi.org/pypi/cloakbrowser/json "HTTP/1.1 200 OK"
+CloakBrowser: C:\Users\Administrator\.cloakbrowser\chromium-146.0.7680.177.5\chrome.exe
+Kontur login probe for INN 7707083893...
+{
+  "inn": "7707083893",
+  "profile_dir": "C:\\Project\\Parser\\output\\kontur_profile",
+  "login": {
+    "logged_in": true,
+    "steps": [
+      {
+        "step": "home",
+        "url": "https://focus.kontur.ru/",
+        "title": "╨Я╤А╨╛╨▓╨╡╤А╨║╨░ ╨║╨╛╨╜╤В╤А╨░╨│╨╡╨╜╤В╨░ ╨┐╨╛ ╨Ш╨Э╨Э ╨╕╨╗╨╕ ╨Ю╨У╨а╨Э, ╨┐╤А╨╛╨▓╨╡╤А╨╕╤В╤М ╤Д╨╕╤А╨╝╤Г, ╤О╤А╨╕╨┤╨╕╤З╨╡╤Б╨║╨╛╨╡ ╨╗╨╕╤Ж╨╛ ╨╕╨╗╨╕ ╨┐╤А╨╡╨┤╨┐╤А╨╕╨╜╨╕╨╝╨░╤В╨╡╨╗╤П, ╨╜╨░╨╣╤В╨╕ ╨╛╤Д╨╕╤Ж╨╕╨░╨╗╤М╨╜╤Л╨╡ ╤Б╨▓╨╡╨┤╨╡╨╜╨╕╤П ╨╛╨▒ ╨╛╤А╨│╨░╨╜╨╕╨╖╨░╤Ж╨╕╤П╤Е ╨▓ ╤Б╨╡╤А╨▓╨╕╤Б╨╡ - ╨Ъ╨╛╨╜╤В╤Г╤А.╨д╨╛╨║╤Г╤Б"
+      },
+      {
+        "step": "click_login_same_tab",
+        "url": "https://focus.kontur.ru/"
+      },
+      {
+        "step": "direct_auth_url",
+        "url": "https://auth.kontur.ru/"
+      },
+      {
+        "step": "auth_page",
+        "url": "https://auth.kontur.ru/",
+        "title": "╨Т╤Е╨╛╨┤ ╨▓ ╤Н╨║╨╛╤Б╨╕╤Б╤В╨╡╨╝╤Г ╨Ъ╨╛╨╜╤В╤Г╤А"
+      },
+      {
+        "step": "after_login",
+        "url": "https://auth.kontur.ru/",
+        "title": "╨Т╤Е╨╛╨┤ ╨▓ ╤Н╨║╨╛╤Б╨╕╤Б╤В╨╡╨╝╤Г ╨Ъ╨╛╨╜╤В╤Г╤А"
+      }
+    ]
+  },
+  "company": {
+    "url": "https://focus.kontur.ru/entity?query=7707083893",
+    "title": "╨а╨╡╨║╨▓╨╕╨╖╨╕╤В╤Л ╨║╨╛╨╝╨┐╨░╨╜╨╕╨╕ тАФ ╨Ъ╨╛╨╜╤В╤Г╤А.╨д╨╛╨║╤Г╤Б",
+    "html_len": 30805,
+    "has_inn": true,
+    "hints": [
+      "inn_in_html"
+    ],
+    "captcha": false
+  }
+}
+
+=== SUMMARY ===
+Login: OK
+Company page: ╨а╨╡╨║╨▓╨╕╨╖╨╕╤В╤Л ╨║╨╛╨╝╨┐╨░╨╜╨╕╨╕ тАФ ╨Ъ╨╛╨╜╤В╤Г╤А.╨д╨╛╨║╤Г╤Б
+Hints: inn_in_html

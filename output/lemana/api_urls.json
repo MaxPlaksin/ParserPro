@@ -1,0 +1,17 @@
+{
+  "urls": [
+    "https://api.lemanapro.ru/hybrid/v1/tracking/category/view?lang=ru",
+    "https://api.lemanapro.ru/hybrid/v1/post-loyalty-rewards?lang=ru",
+    "https://api.lemanapro.ru/carousel/v1/post-loyalty-rewards?lang=ru",
+    "https://api.lemanapro.ru/experience/LeroymerlinWebsite/v1/navigation-pdp-api/get-related-services?productId=81944895&regionCode=moscow&lang=ru",
+    "https://api.lemanapro.ru/experience/LeroymerlinWebsite/v1/navigation-pdp-api/post-loyalty-rewards?lang=ru",
+    "https://api.lemanapro.ru/experience/LeroymerlinWebsite/v1/navigation-pdp-api/get-checkout-settings?productId=81944895&regionCode=moscow&modelId=200175&unitOfsale=NIU&lang=ru",
+    "https://api.lemanapro.ru/experience/LeroymerlinWebsite/v1/navigation-pdp-api/get-regions-and-stores?lang=ru",
+    "https://api.lemanapro.ru/experience/LeroymerlinWebsite/v1/navigation-pdp-api/get-stocks?lang=ru",
+    "https://api.lemanapro.ru/experience/LeroymerlinWebsite/v1/navigation-pdp-api/tracking/product/view?lang=ru"
+  ],
+  "pdp": {
+    "info": null,
+    "mediaKeys": []
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "pdp": [
+    "version",
+    "pdp"
+  ],
+  "pdp-stretch-banner": [
+    "version",
+    "web",
+    "mobile",
+    "colors",
+    "env"
+  ],
+  "pdp-header": [
+    "version",
+    "model",
+    "modelLoading",
+    "modelError",
+    "orchestratorHost",
+    "orchestratorBackendHost",
+    "useCredentials",
+    "requestID",
+    "isBot",
+    "userAgent",
+    "path",
+    "host",
+    "deviceType",
+    "suggestions",
+    "sponsoredBrands",
+    "cookies",
+    "productRedirection",
+    "headerDrawers",
+    "sponsoredProducts",
+    "loyalty"
+  ],
+  "basket-logic": [
+    "version",
+    "env"
+  ],
+  "pdp-recommendedProducts": [
+    "version",
+    "carousel",
+    "router",
+    "host",
+    "cookies",
+    "layers",
+    "isBot",
+    "env",
+    "userAgent",
+    "disableComparisons"
+  ],
+  "pdp-complements": [
+    "version",
+    "carousel",
+    "router",
+    "host",
+    "cookies",
+    "layers",
+    "isBot",
+    "env",
+    "userAgent",
+    "disableComparisons"
+  ],
+  "pdp-substitutes": [
+    "version",
+    "carousel",
+    "router",
+    "host",
+    "cookies",
+    "layers",
+    "isBot",
+    "env",
+    "userAgent",
+    "disableComparisons"
+  ],
+  "review-form": [
+    "version",
+    "env"
+  ],
+  "pdp-calculator": [
+    "env"
+  ],
+  "pdp-footer": [
+    "version",
+    "model",
+    "modelLoading",
+    "modelError",
+    "orchestratorHost",
+    "orchestratorBackendHost",
+    "useCredentials",
+    "requestID",
+    "isBot",
+    "userAgent",
+    "path",
+    "host",
+    "deviceType",
+    "suggestions",
+    "sponsoredBrands",
+    "cookies",
+    "productRedirection",
+    "headerDrawers",
+    "sponsoredProducts",
+    "loyalty"
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "inn": "7707083893",
+  "source": "checko",
+  "ogrn": "1027700132195",
+  "name": "ПАО СБЕРБАНК",
+  "url": "https://checko.ru/company/pao-sberbank-1027700132195",
+  "revenue_year_1": null,
+  "revenue_value_1": null,
+  "revenue_year_2": null,
+  "revenue_value_2": null,
+  "revenue_change_percent": null,
+  "profit_year_1": null,
+  "profit_value_1": null,
+  "profit_year_2": null,
+  "profit_value_2": null,
+  "profit_change_percent": null,
+  "enforcement_total_count": 357,
+  "enforcement_active_count": 357,
+  "enforcement_total_amount": 34100000.0,
+  "arbitration_defendant_total_count": 6114,
+  "arbitration_defendant_active_count": 891,
+  "arbitration_defendant_total_amount": 26100000000.0,
+  "raw_data": {
+    "finances_by_year": {},
+    "defendant": {
+      "count": 6114,
+      "amount": 26100000000.0
+    },
+    "defendant_active": {
+      "count": 891,
+      "amount": 8100000000.0
+    },
+    "enforcement": {
+      "total_count": 357,
+      "active_count": 357,
+      "total_amount": 34100000.0,
+      "debt_amount": null
+    },
+    "identity": {
+      "name": "ПАО СБЕРБАНК",
+      "inn": "7707083893",
+      "ogrn": "1027700132195",
+      "url": "https://checko.ru/company/pao-sberbank-1027700132195"
+    }
+  },
+  "status": "ok"
+}

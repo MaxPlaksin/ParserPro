@@ -1,0 +1,110 @@
+{
+  "plp": [
+    "version",
+    "plp"
+  ],
+  "plp-stretch-banner": [
+    "version",
+    "web",
+    "mobile",
+    "colors",
+    "env"
+  ],
+  "plp-header": [
+    "version",
+    "model",
+    "modelLoading",
+    "modelError",
+    "orchestratorHost",
+    "orchestratorBackendHost",
+    "useCredentials",
+    "requestID",
+    "isBot",
+    "userAgent",
+    "path",
+    "host",
+    "deviceType",
+    "suggestions",
+    "sponsoredBrands",
+    "cookies",
+    "productRedirection",
+    "headerDrawers",
+    "sponsoredProducts",
+    "loyalty",
+    "loyaltyRegistrationModal",
+    "B2BOrganizations",
+    "favoriteAddress",
+    "orchestratorHostKz",
+    "apiKey",
+    "logoProUrl"
+  ],
+  "basket-logic": [
+    "version",
+    "env"
+  ],
+  "plp-calculator-saved-project-configurations-list": [
+    "isCarouselShown",
+    "unauthorizedCustomerId",
+    "env"
+  ],
+  "plp-reco-brands": [
+    "version"
+  ],
+  "products-carousel-2-1-dekorativnye-paneli-1": [
+    "version",
+    "carousel",
+    "router",
+    "host",
+    "cookies",
+    "layers",
+    "isBot",
+    "env",
+    "userAgent",
+    "disableComparisons"
+  ],
+  "products-carousel-2-1-dekorativnye-paneli-2": [
+    "version",
+    "carousel",
+    "router",
+    "host",
+    "cookies",
+    "layers",
+    "isBot",
+    "env",
+    "userAgent",
+    "disableComparisons"
+  ],
+  "plp-footer": [
+    "version",
+    "model",
+    "modelLoading",
+    "modelError",
+    "orchestratorHost",
+    "orchestratorBackendHost",
+    "useCredentials",
+    "requestID",
+    "isBot",
+    "userAgent",
+    "path",
+    "host",
+    "deviceType",
+    "suggestions",
+    "sponsoredBrands",
+    "cookies",
+    "productRedirection",
+    "headerDrawers",
+    "sponsoredProducts",
+    "loyalty",
+    "loyaltyRegistrationModal",
+    "B2BOrganizations",
+    "favoriteAddress",
+    "orchestratorHostKz",
+    "apiKey"
+  ],
+  "plp-calculator-project-configuration": [
+    "env"
+  ],
+  "plp-calculator-saved-project-configuration": [
+    "env"
+  ]
+}

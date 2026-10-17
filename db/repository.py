@@ -417,6 +417,74 @@ class ProductRepository:
                 (product_id, price, entry.old_price, now),
             )
 
+    def upsert_catalog_section(
+        self,
+        *,
+        source: str,
+        section_code: str,
+        parent_section_code: str | None,
+        name: str,
+        path: str,
+        url: str,
+        kind: str,
+        depth: int,
+        product_qty: int | None = None,
+    ) -> int:
+        now = utc_now_iso()
+        with self._thread_lock:
+            with self._file_lock():
+                conn = self._connect()
+                try:
+                    conn.execute(
+                        """
+                        INSERT INTO catalog_sections (
+                            source, section_code, parent_section_code, name, path, url,
+                            kind, depth, product_qty, created_at, updated_at
+                        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                        ON CONFLICT(source, section_code) DO UPDATE SET
+                            parent_section_code = excluded.parent_section_code,
+                            name = excluded.name,
+                            path = excluded.path,
+                            url = excluded.url,
+                            kind = excluded.kind,
+                            depth = excluded.depth,
+                            product_qty = excluded.product_qty,
+                            updated_at = excluded.updated_at
+                        """,
+                        (
+                            source,
+                            str(section_code),
+                            str(parent_section_code) if parent_section_code else None,
+                            name,
+                            path,
+                            url,
+                            kind,
+                            depth,
+                            product_qty,
+                            now,
+                            now,
+                        ),
+                    )
+                    row = conn.execute(
+                        "SELECT id FROM catalog_sections WHERE source = ? AND section_code = ?",
+                        (source, str(section_code)),
+                    ).fetchone()
+                    conn.commit()
+                    return int(row["id"])
+                finally:
+                    conn.close()
+
+    def product_exists(self, source: str, source_id: str) -> bool:
+        conn = self._connect()
+        try:
+            row = conn.execute(
+                "SELECT 1 FROM products WHERE source = ? AND source_id = ? LIMIT 1",
+                (source, str(source_id)),
+            ).fetchone()
+            return row is not None
+        finally:
+            conn.close()
+
 
 class _FileLock:
     def __init__(self, lock_path: Path):

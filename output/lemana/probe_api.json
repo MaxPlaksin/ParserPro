@@ -1,0 +1,26 @@
+[
+  {
+    "status": 401,
+    "url": "https://lemanapro.ru/"
+  },
+  {
+    "status": 200,
+    "url": "https://lemanapro.ru/__qrator/validate?pow=241&nonce=v2.0.1791476351.336.5cff6c59T2SZE6sW|oN3fmUsoVsqGyuFs|KGMoa6XWf38Df2qg8UZJfZbnTpzerFet1m1krVB8SSWwQ+/WY4gPtuEWJaG6zzGUAIWRmXPhjiLDXWgUM5bPoQ==&qsessid=HDlRU6qgYukIk4qG6XK9BcrjYRU="
+  },
+  {
+    "status": 200,
+    "url": "https://lemanapro.ru/"
+  },
+  {
+    "status": 200,
+    "url": "https://receive-sentry.lmru.tech/api/213/envelope/?sentry_version=7&sentry_key=0fd675c5589a384812ea3d9a2a200795&sentry_client=sentry.javascript.browser%2F8.55.0"
+  },
+  {
+    "status": 200,
+    "url": "https://hit.aclpro.ru/lemanaproru/?sid=d5fb1ff0-5c98-4dbf-ba57-a3ff9e791250&t_tid=03d40d92-a471-42cf-ac81-bf125fa82173&t_dp=&wid=&par=&ref=&t_t=&t_if=0&t_s=&if_p=&ih=760&iw=1034&s_w=1920&s_h=1080&land=https%3A%2F%2Flemanapro.ru%2F"
+  },
+  {
+    "status": 200,
+    "url": "https://receive-sentry.lmru.tech/api/213/envelope/?sentry_version=7&sentry_key=0fd675c5589a384812ea3d9a2a200795&sentry_client=sentry.javascript.browser%2F8.55.0"
+  }
+]

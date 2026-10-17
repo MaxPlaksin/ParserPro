@@ -1,0 +1,42 @@
+{
+  "hits": {
+    "displayedName": true,
+    "characteristics": true,
+    "certificate": true,
+    "description": true,
+    "__NEXT_DATA__": false,
+    "productId": true
+  },
+  "calls": [
+    {
+      "status": 401,
+      "path": "/experience/LeroymerlinWebsite/v1/navigation-pdp-api/get-product-main-info?productId=81944895&regionCode=moscow&lang=ru",
+      "sample": "{\n  \"message\":\"No API key found in request\",\n  \"request_id\":\"81c5961d9b97447cae15d91d25b46649\"\n}"
+    },
+    {
+      "status": 404,
+      "path": "/experience/LeroymerlinWebsite/v1/navigation-pdp-api/get-product?productId=81944895&regionCode=moscow&lang=ru",
+      "sample": "{\n  \"message\":\"no Route matched with those values\",\n  \"request_id\":\"9445fb5f6f30b80dc0f1363289e07320\"\n}"
+    },
+    {
+      "status": 404,
+      "path": "/experience/LeroymerlinWebsite/v1/navigation-pdp-api/get-product-info?productId=81944895&regionCode=moscow&lang=ru",
+      "sample": "{\n  \"message\":\"no Route matched with those values\",\n  \"request_id\":\"4bb414265945a962ad7efc6b90d3f036\"\n}"
+    },
+    {
+      "status": 404,
+      "path": "/hybrid/v1/products/81944895?regionCode=moscow&lang=ru",
+      "sample": "{\n  \"message\":\"no Route matched with those values\",\n  \"request_id\":\"0e7fb424d45c096705ef6c2b24a9485c\"\n}"
+    },
+    {
+      "status": 404,
+      "path": "/hybrid/v1/products/81944895/main-info?regionCode=moscow&lang=ru",
+      "sample": "{\n  \"message\":\"no Route matched with those values\",\n  \"request_id\":\"aabe2d089b8ee661f6560624ecfd420c\"\n}"
+    },
+    {
+      "status": 404,
+      "path": "/experience/LeroymerlinWebsite/v1/navigation-plp-api/get-products?productIds=81944895&regionCode=moscow&lang=ru",
+      "sample": "{\n  \"message\":\"no Route matched with those values\",\n  \"request_id\":\"f282281d99afd35a92a1173498e9d211\"\n}"
+    }
+  ]
+}

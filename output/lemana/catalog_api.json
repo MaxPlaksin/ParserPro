@@ -1,0 +1,282 @@
+[
+  {
+    "status": 200,
+    "url": "https://static.lemanapro.ru/okapi/react18/react.js",
+    "ct": "text/javascript"
+  },
+  {
+    "status": 200,
+    "url": "https://static.lemanapro.ru/triffle/p0925/basket-logic/basket-logic.widget.basket-logic.a6f9a942182e7ea5dc8d.js",
+    "ct": "application/javascript"
+  },
+  {
+    "status": 200,
+    "url": "https://static.lemanapro.ru/products/p0511/lemanapro.ru.js",
+    "ct": "application/javascript"
+  },
+  {
+    "status": 200,
+    "url": "https://static.lemanapro.ru/triffle/p0476/product-carousel/carousel.widget.product-carousel.f27822df46ebcb38bc95.js",
+    "ct": "application/javascript"
+  },
+  {
+    "status": 200,
+    "url": "https://static.lemanapro.ru/microfronts/p0476/header-footer/footer.widget.header-footer.7fc97fea6079cbcf9203.js",
+    "ct": "application/javascript"
+  },
+  {
+    "status": 200,
+    "url": "https://static.lemanapro.ru/triffle/p0685/calculator/saved-project-configurations-list.widget.calculator.1f37d545e3fcdd3bb608.js",
+    "ct": "application/javascript"
+  },
+  {
+    "status": 200,
+    "url": "https://static.lemanapro.ru/triffle/p0985/placements/brands.widget.placements.d9762e000521c241243e.js",
+    "ct": "application/javascript"
+  },
+  {
+    "status": 200,
+    "url": "https://static.lemanapro.ru/triffle/p0985/placements/banner.widget.placements.960e3e1bee2756362e0f.js",
+    "ct": "application/javascript"
+  },
+  {
+    "status": 200,
+    "url": "https://static.lemanapro.ru/microfronts/p0476/header-footer/header.widget.header-footer.d5966c26eff9285477a6.js",
+    "ct": "application/javascript"
+  },
+  {
+    "status": 200,
+    "url": "https://static.lemanapro.ru/triffle/p0685/calculator/saved-project-configuration.widget.calculator.a155452ed5867bb6720c.js",
+    "ct": "application/javascript"
+  },
+  {
+    "status": 200,
+    "url": "https://static.lemanapro.ru/triffle/p0685/calculator/project-configuration.widget.calculator.b4b1ce0d1330fc695039.js",
+    "ct": "application/javascript"
+  },
+  {
+    "status": 200,
+    "url": "https://static.lemanapro.ru/microfronts/p0476/plp/app.plp.19cf6e454e40ca093841.js",
+    "ct": "application/javascript"
+  },
+  {
+    "status": 200,
+    "url": "https://api.lemanapro.ru/hybrid/v1/tracking/category/view?lang=ru",
+    "ct": "application/json; charset=utf-8"
+  },
+  {
+    "status": 200,
+    "url": "https://api.lemanapro.ru/hybrid/v1/post-loyalty-rewards?lang=ru",
+    "ct": "application/json; charset=utf-8"
+  },
+  {
+    "status": 200,
+    "url": "https://websdk.appsflyer.com/?st=banners&",
+    "ct": "application/javascript"
+  },
+  {
+    "status": 200,
+    "url": "https://static.lemanapro.ru/products/p0527/tokenRefresh-1.0.3.min.js",
+    "ct": "application/javascript"
+  },
+  {
+    "status": 200,
+    "url": "https://cdn.uxfeedback.ru/widget.js",
+    "ct": "text/javascript"
+  },
+  {
+    "status": 200,
+    "url": "https://tags.soloway.ru/DSPCounter.min.js",
+    "ct": "application/x-javascript"
+  },
+  {
+    "status": 200,
+    "url": "https://tracking.datadrivenpromotion.com/tracking/counter?condition=ZG9tYWluPWxlcm95bWVybGluLnJ1JmlkPTIwOA==&document_url=https%3A%2F%2Flemanapro.ru%2Fcatalogue%2Fdekorativnye-paneli%2F",
+    "ct": "text/javascript;charset=utf-8"
+  },
+  {
+    "status": 200,
+    "url": "https://containers.dsp.solta.io/tag.js",
+    "ct": "application/javascript"
+  },
+  {
+    "status": 200,
+    "url": "https://top-fwz1.mail.ru/js/code.js",
+    "ct": "application/javascript"
+  },
+  {
+    "status": 200,
+    "url": "https://static.a.mts.ru/front-metric-sdk/metric.js?mo=mtsDSPMetricObject",
+    "ct": "application/javascript; charset=utf-8"
+  },
+  {
+    "status": 200,
+    "url": "https://creatives.afp.ai/SmartPixel/2023/leroymerlin.js",
+    "ct": "application/javascript"
+  },
+  {
+    "status": 200,
+    "url": "https://33d9nnan13.kameleoon-russia.com/engine.js",
+    "ct": "application/javascript; charset=utf-8"
+  },
+  {
+    "status": 200,
+    "url": "https://static.terratraf.io/engine/GP.js",
+    "ct": "application/javascript"
+  },
+  {
+    "status": 200,
+    "url": "https://cdn.uxfeedback.ru/assets-7.0.0/2.036b0e71dd20eacc35fb.js",
+    "ct": "text/javascript"
+  },
+  {
+    "status": 200,
+    "url": "https://cdn.uxfeedback.ru/assets-7.0.0/1.7fe96492faa76f9e3216.js",
+    "ct": "text/javascript"
+  },
+  {
+    "status": 200,
+    "url": "https://tracking.datadrivenpromotion.com/external-code?documentUrl=https%3A%2F%2Flemanapro.ru%2Fcatalogue%2Fdekorativnye-paneli%2F",
+    "ct": "text/javascript;charset=utf-8"
+  },
+  {
+    "status": 200,
+    "url": "https://partners.lemanapro.ru/api/tracker/sdk.js",
+    "ct": "application/javascript"
+  },
+  {
+    "status": 200,
+    "url": "https://top-fwz1.mail.ru/js/dyn-goal-config.js?ids=3326366",
+    "ct": "application/javascript; charset=utf-8"
+  },
+  {
+    "status": 200,
+    "url": "https://containers.dsp.solta.io/tag.js?container=106999",
+    "ct": "application/javascript"
+  },
+  {
+    "status": 200,
+    "url": "https://ad.adriver.ru/cgi-bin/erle.cgi?sid=216980&bt=62&custom=128%3D4310%3B129%3D1.11.22%3B153%3Dundefined%3B157%3Dundefined%3B206%3DDSPCounter&ph=0&rnd=377446&tail256=unknown&loc=https%3A%2F%2Flemanapro.ru%2Fcatalogue%2Fdekorativnye-paneli%2F&yid1=1791476357678281139&tuid=-5493389511",
+    "ct": "application/x-javascript"
+  },
+  {
+    "status": 200,
+    "url": "https://data.kameleoon-russia.com/visit/visitor?siteCode=33d9nnan13&engine=true&currentVisit=true&format=ENGINE&maxNumberPreviousVisits=25&version=3&visitorCode=gn50dlqv4lirqseh",
+    "ct": "application/json; charset=utf-8"
+  },
+  {
+    "status": 200,
+    "url": "https://static.terratraf.io/GP/10002546.js",
+    "ct": "application/javascript"
+  },
+  {
+    "status": 200,
+    "url": "https://tags.soloway.ru/DSPCounter.js",
+    "ct": "application/x-javascript"
+  },
+  {
+    "status": 200,
+    "url": "https://px.adhigh.net/t.js",
+    "ct": "application/javascript"
+  },
+  {
+    "status": 200,
+    "url": "https://cdn.al-adtech.com/ssp/smart-pixel.js",
+    "ct": "application/javascript"
+  },
+  {
+    "status": 200,
+    "url": "https://widget-api.uxfeedback.ru/v6/widgets/lotvc063li101jofvx4276c4?uid=1aeecf50-c334-11f1-ad69-7dc7d2d97efd&uidType=new",
+    "ct": "application/json; charset=utf-8"
+  },
+  {
+    "status": 200,
+    "url": "https://prodmp.ru/client/counter.js?condition=Y2xpZW50SWQ9MTM0OCZjb3VudGVySWQ9MTcxNg==&documentUrl=https://lemanapro.ru/catalogue/dekorativnye-paneli/",
+    "ct": "text/javascript;charset=iso-8859-1"
+  },
+  {
+    "status": 200,
+    "url": "https://containers.dsp.solta.io/tag.js?kmb_track=1&id=358",
+    "ct": "application/javascript"
+  },
+  {
+    "status": 200,
+    "url": "https://4962697451791476397945.cm.a.mts.ru/cm/match?flowId=0ad8166e-9271-173c-8192-960ebcb9000a",
+    "ct": "application/json"
+  },
+  {
+    "status": 200,
+    "url": "https://cdn.uxfeedback.ru/assets-7.0.0/4.d479f069cf639bb72aec.js",
+    "ct": "text/javascript"
+  },
+  {
+    "status": 200,
+    "url": "https://cdn.uxfeedback.ru/assets-7.0.0/3.a2759f766c4cbb7adff3.js",
+    "ct": "text/javascript"
+  },
+  {
+    "status": 200,
+    "url": "https://ad.adriver.ru/cgi-bin/erle.cgi?sid=228568&bt=62&custom=128%3D5025%3B129%3D1.11.22%3B153%3Dundefined%3B157%3Dundefined%3B206%3DDSPCounter&ph=1&rnd=341467&tail256=unknown&loc=https%3A%2F%2Flemanapro.ru%2Fcatalogue%2Fdekorativnye-paneli%2F&yid1=1791476357678281139&tuid=-5864953274",
+    "ct": "application/x-javascript"
+  },
+  {
+    "status": 200,
+    "url": "https://dmp.adspend.space/public/visit.js?rand=1791476398300",
+    "ct": "text/javascript; charset=utf-8"
+  },
+  {
+    "status": 200,
+    "url": "https://5479001681791476398098.cm.a.mts.ru/cm/match?flowId=c128a652-29c1-46c5-aece-22212bde700f&measurement_id=MTS_DSP_web&dsp_uid=353d030e-9069-4390-8259-085c0f372894",
+    "ct": "application/json"
+  },
+  {
+    "status": 200,
+    "url": "https://privacy-cs.mail.ru/static/sync-loader.js",
+    "ct": "application/javascript;charset=utf-8"
+  },
+  {
+    "status": 200,
+    "url": "https://sync.bumlam.com/?src=etg1&s_data=CAIQARiuhZ_WBqIBEBsyQljDNBHxhuAAJZDAZHw*",
+    "ct": "application/javascript"
+  },
+  {
+    "status": 200,
+    "url": "https://px.adhigh.net/p/tracking.js?site_id=9762&trk=&product_id=&product_price=&category_id=&user_data=&pixel_id=&scr=1920x1080x32&uit=1791476398517&ifr=0&tz=-180&url=https%3A%2F%2Flemanapro.ru%2Fcatalogue%2Fdekorativnye-paneli%2F&rf=&pl=-2772344800&bounced=1",
+    "ct": "text/javascript"
+  },
+  {
+    "status": 200,
+    "url": "https://ad.adriver.ru/cgi-bin/json.cgi?sid=1&ad=719473&bt=55&pid=4425169&bid=12604289&bn=12604289&tuid=1&cfa=1&rnd=437535&loc=https%3A%2F%2Flemanapro.ru%2Fcatalogue%2Fdekorativnye-paneli%2F&custom=127%3D1%3B129%3D2.14.4%3B299%3DAkOnQDTClyAgOJdNnqrhAwA%3B308%3D1791476357678281139%3B309%3D0%3B310%3D0",
+    "ct": "application/json"
+  },
+  {
+    "status": 200,
+    "url": "https://sync.bumlam.com/gp/",
+    "ct": "application/json"
+  },
+  {
+    "status": 200,
+    "url": "https://api.lemanapro.ru/carousel/v1/post-loyalty-rewards?lang=ru",
+    "ct": "application/json; charset=utf-8"
+  },
+  {
+    "status": 200,
+    "url": "https://static.bumlam.com/stableid/stable.js",
+    "ct": "application/javascript; charset=utf-8"
+  },
+  {
+    "status": 200,
+    "url": "https://api.lemanapro.ru/retail-rocket-smart-placements/v1/tracking/impression/view",
+    "ct": "application/json; charset=utf-8"
+  },
+  {
+    "status": 200,
+    "url": "https://api.lemanapro.ru/carousel/v1/post-loyalty-rewards?lang=ru",
+    "ct": "application/json; charset=utf-8"
+  },
+  {
+    "status": 200,
+    "url": "https://prodmp.ru/client/hit?condition=Y2xpZW50SWQ9MTM0OCZjb3VudGVySWQ9MTcxNg==&hitid=11985ab4-c010-4bb9-90c8-dfd50d5c3027&rai=538efb3a6d5618cd8698ad9a45a2cd63&documentUrl=https://lemanapro.ru/catalogue/dekorativnye-paneli/",
+    "ct": "text/javascript;charset=iso-8859-1"
+  }
+]

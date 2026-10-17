@@ -1,0 +1,121 @@
+﻿15:22:04 [INFO] HTTP Request: GET https://pypi.org/pypi/cloakbrowser/json "HTTP/1.1 200 OK"
+Probing counterparty sites for INN 7707083893...
+CloakBrowser: C:\Users\Administrator\.cloakbrowser\chromium-146.0.7680.177.5\chrome.exe
+headless=False, settle=5.0s
+  Cloak тЖТ checko_home: https://checko.ru/
+  Cloak тЖТ checko_company: https://checko.ru/search?query=7707083893
+  Cloak тЖТ kontur_home: https://focus.kontur.ru/
+  Cloak тЖТ kontur_search: https://focus.kontur.ru/entity?query=7707083893
+  Cloak тЖТ fns_bo: https://bo.nalog.gov.ru/organizations-card/7707083893
+  Cloak тЖТ fns_egrul: form search
+[
+  {
+    "site": "checko_home",
+    "url": "https://checko.ru/",
+    "status": 200,
+    "title": "╨Я╨╛╤А╤В╨░╨╗ \"╨з╨╡╨║╨║╨╛\" тАУ ╨┐╤А╨╛╨▓╨╡╤А╤М ╨╗╤О╨▒╤Г╤О ╨╛╤А╨│╨░╨╜╨╕╨╖╨░╤Ж╨╕╤О ╨╕╨╗╨╕ ╨Ш╨Я",
+    "final_url": "https://checko.ru/",
+    "html_len": 72381,
+    "blocked": false,
+    "captcha": false,
+    "login_required": true,
+    "has_inn": false,
+    "hints": [
+      "arbitration_keyword",
+      "accounting_keyword"
+    ],
+    "error": ""
+  },
+  {
+    "site": "checko_company",
+    "url": "https://checko.ru/search?query=7707083893",
+    "status": 200,
+    "title": "╨Я╨Р╨Ю ╨б╨С╨Х╨а╨С╨Р╨Э╨Ъ - ╨Ь╨╛╤Б╨║╨▓╨░ - ╨Ш╨Э╨Э 7707083893 - ╨Я╤А╨╡╨╖╨╕╨┤╨╡╨╜╤В, ╨┐╤А╨╡╨┤╤Б╨╡╨┤╨░╤В╨╡╨╗╤М ╨┐╤А╨░╨▓╨╗╨╡╨╜╨╕╤П ╨У╤А╨╡╤Д ╨У. ╨Ю.",
+    "final_url": "https://checko.ru/company/pao-sberbank-1027700132195",
+    "html_len": 101842,
+    "blocked": true,
+    "captcha": false,
+    "login_required": false,
+    "has_inn": true,
+    "hints": [
+      "inn_in_html",
+      "enforcement_keyword",
+      "arbitration_keyword",
+      "accounting_keyword"
+    ],
+    "error": ""
+  },
+  {
+    "site": "kontur_home",
+    "url": "https://focus.kontur.ru/",
+    "status": 200,
+    "title": "╨Я╤А╨╛╨▓╨╡╤А╨║╨░ ╨║╨╛╨╜╤В╤А╨░╨│╨╡╨╜╤В╨░ ╨┐╨╛ ╨Ш╨Э╨Э ╨╕╨╗╨╕ ╨Ю╨У╨а╨Э, ╨┐╤А╨╛╨▓╨╡╤А╨╕╤В╤М ╤Д╨╕╤А╨╝╤Г, ╤О╤А╨╕╨┤╨╕╤З╨╡╤Б╨║╨╛╨╡ ╨╗╨╕╤Ж╨╛ ╨╕╨╗╨╕ ╨┐╤А╨╡╨┤╨┐╤А╨╕╨╜╨╕╨╝╨░╤В╨╡╨╗╤П, ╨╜╨░╨╣╤В╨╕ ╨╛╤Д╨╕╤Ж╨╕╨░╨╗╤М╨╜╤Л╨╡ ╤Б╨▓╨╡╨┤╨╡╨╜╨╕╤П ╨╛╨▒ ╨╛╤А╨│╨░╨╜╨╕╨╖╨░╤Ж╨╕╤П╤Е ╨▓ ╤Б╨╡╤А╨▓╨╕╤Б╨╡ - ╨Ъ╨╛╨╜╤В╤Г╤А.╨д╨╛╨║╤Г╤Б",
+    "final_url": "https://focus.kontur.ru/",
+    "html_len": 684618,
+    "blocked": true,
+    "captcha": true,
+    "login_required": true,
+    "has_inn": false,
+    "hints": [
+      "enforcement_keyword",
+      "arbitration_keyword",
+      "accounting_keyword"
+    ],
+    "error": ""
+  },
+  {
+    "site": "kontur_search",
+    "url": "https://focus.kontur.ru/entity?query=7707083893",
+    "status": 200,
+    "title": "╨а╨╡╨║╨▓╨╕╨╖╨╕╤В╤Л ╨║╨╛╨╝╨┐╨░╨╜╨╕╨╕ тАФ ╨Ъ╨╛╨╜╤В╤Г╤А.╨д╨╛╨║╤Г╤Б",
+    "final_url": "https://focus.kontur.ru/entity?query=7707083893",
+    "html_len": 30808,
+    "blocked": true,
+    "captcha": false,
+    "login_required": false,
+    "has_inn": true,
+    "hints": [
+      "inn_in_html"
+    ],
+    "error": ""
+  },
+  {
+    "site": "fns_bo",
+    "url": "https://bo.nalog.gov.ru/organizations-card/7707083893",
+    "status": 200,
+    "title": "╨а╨╡╤Б╤Г╤А╤Б ╨С╨д╨Ю",
+    "final_url": "https://bo.nalog.gov.ru/404",
+    "html_len": 16788,
+    "blocked": false,
+    "captcha": false,
+    "login_required": false,
+    "has_inn": false,
+    "hints": [],
+    "error": ""
+  },
+  {
+    "site": "fns_egrul",
+    "url": "https://egrul.nalog.ru/index.html",
+    "status": 200,
+    "title": "╨Я╤А╨╡╨┤╨╛╤Б╤В╨░╨▓╨╗╨╡╨╜╨╕╨╡ ╤Б╨▓╨╡╨┤╨╡╨╜╨╕╨╣ ╨╕╨╖ ╨Х╨У╨а╨о╨Ы/╨Х╨У╨а╨Ш╨Я ╨▓ ╤Н╨╗╨╡╨║╤В╤А╨╛╨╜╨╜╨╛╨╝ ╨▓╨╕╨┤╨╡",
+    "final_url": "https://egrul.nalog.ru/index.html",
+    "html_len": 19628,
+    "blocked": false,
+    "captcha": true,
+    "login_required": false,
+    "has_inn": true,
+    "hints": [
+      "inn_in_html",
+      "form_submitted"
+    ],
+    "error": ""
+  }
+]
+
+=== SUMMARY ===
+checko_home      status=200 len= 72381 OK [LOGIN, hints=arbitration_keyword,accounting_keyword]
+checko_company   status=200 len=101842 FAIL [BLOCKED, INN_OK, hints=inn_in_html,enforcement_keyword,arbitration_keyword,accounting_keyword]
+kontur_home      status=200 len=684618 FAIL [BLOCKED, CAPTCHA, LOGIN, hints=enforcement_keyword,arbitration_keyword,accounting_keyword]
+kontur_search    status=200 len= 30808 FAIL [BLOCKED, INN_OK, hints=inn_in_html]
+fns_bo           status=200 len= 16788 OK [-]
+fns_egrul        status=200 len= 19628 FAIL [CAPTCHA, INN_OK, hints=inn_in_html,form_submitted]

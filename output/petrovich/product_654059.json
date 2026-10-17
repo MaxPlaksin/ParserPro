@@ -1,0 +1,2039 @@
+{
+  "productGuid": "e827a58f-6846-11ea-80c8-00155dfc0b56",
+  "code": 654059,
+  "summaryDescription": null,
+  "images": [
+    "//cs.p-static.ru/image/4150106/original.jpg",
+    "//cs.p-static.ru/image/57563362/original.jpg",
+    "//cs.p-static.ru/image/57563345/original.jpg",
+    "//cs.p-static.ru/image/57563323/original.jpg",
+    "//cs.p-static.ru/image/57563308/original.jpg"
+  ],
+  "panoramas": null,
+  "title": "Газобетон ЛСР 100х250х625 мм D500",
+  "section": {
+    "mobileRedirect": null,
+    "redirectAppLink": {
+      "type": "catalog_section",
+      "webUrl": "https://petrovich.ru/catalog/6619/",
+      "pathParams": {
+        "sectionCode": 6619
+      }
+    },
+    "sectionGuid": "e9e4a94f-e397-11e6-95f7-00259036a192",
+    "code": 6619,
+    "title": "Газобетонные блоки",
+    "coverImage": "//cs.p-static.ru/image/1669965/original.jpg",
+    "seoLink": null,
+    "productQty": 0,
+    "imageTop": null,
+    "viewTypes": [
+      "products"
+    ],
+    "isRent": false,
+    "isShowOnHeaderTop": false,
+    "isShowOnMobileMainCatalog": false,
+    "isEcosystemService": false,
+    "isFriendsClubPrize": false
+  },
+  "coverImage": "//cs.p-static.ru/image/4150106/original.jpg",
+  "breadcrumbs": [
+    {
+      "mobileRedirect": null,
+      "redirectAppLink": {
+        "type": "catalog_section",
+        "webUrl": "https://petrovich.ru/catalog/245635348/",
+        "pathParams": {
+          "sectionCode": 245635348
+        }
+      },
+      "sectionGuid": "43b98880-2f29-11eb-80cb-00155dfe250f",
+      "code": 245635348,
+      "title": "Стройматериалы",
+      "coverImage": "//cs.p-static.ru/image/1221703/original.jpg",
+      "seoLink": null,
+      "productQty": 0,
+      "imageTop": "https://cs.p-static.ru/content/images/650/____________________________.png",
+      "viewTypes": [
+        "products"
+      ],
+      "isRent": false,
+      "isShowOnHeaderTop": true,
+      "isShowOnMobileMainCatalog": true,
+      "isEcosystemService": false,
+      "isFriendsClubPrize": false
+    },
+    {
+      "mobileRedirect": null,
+      "redirectAppLink": {
+        "type": "catalog_section",
+        "webUrl": "https://petrovich.ru/catalog/12101/",
+        "pathParams": {
+          "sectionCode": 12101
+        }
+      },
+      "sectionGuid": "e9e4a8f3-e397-11e6-95f7-00259036a192",
+      "code": 12101,
+      "title": "Стеновые и фасадные материалы",
+      "coverImage": "//cs.p-static.ru/image/68770332/original.png",
+      "seoLink": null,
+      "productQty": 0,
+      "imageTop": null,
+      "viewTypes": [
+        "products"
+      ],
+      "isRent": false,
+      "isShowOnHeaderTop": false,
+      "isShowOnMobileMainCatalog": false,
+      "isEcosystemService": false,
+      "isFriendsClubPrize": false
+    },
+    {
+      "mobileRedirect": null,
+      "redirectAppLink": {
+        "type": "catalog_section",
+        "webUrl": "https://petrovich.ru/catalog/1573/",
+        "pathParams": {
+          "sectionCode": 1573
+        }
+      },
+      "sectionGuid": "e9e4a93d-e397-11e6-95f7-00259036a192",
+      "code": 1573,
+      "title": "Строительные блоки",
+      "coverImage": "//cs.p-static.ru/image/81433814/original.png",
+      "seoLink": null,
+      "productQty": 0,
+      "imageTop": null,
+      "viewTypes": [
+        "products"
+      ],
+      "isRent": false,
+      "isShowOnHeaderTop": false,
+      "isShowOnMobileMainCatalog": false,
+      "isEcosystemService": false,
+      "isFriendsClubPrize": false
+    },
+    {
+      "mobileRedirect": null,
+      "redirectAppLink": {
+        "type": "catalog_section",
+        "webUrl": "https://petrovich.ru/catalog/6619/",
+        "pathParams": {
+          "sectionCode": 6619
+        }
+      },
+      "sectionGuid": "e9e4a94f-e397-11e6-95f7-00259036a192",
+      "code": 6619,
+      "title": "Газобетонные блоки",
+      "coverImage": "//cs.p-static.ru/image/1669965/original.jpg",
+      "seoLink": null,
+      "productQty": 0,
+      "imageTop": null,
+      "viewTypes": [
+        "products"
+      ],
+      "isRent": false,
+      "isShowOnHeaderTop": false,
+      "isShowOnMobileMainCatalog": false,
+      "isEcosystemService": false,
+      "isFriendsClubPrize": false
+    },
+    {
+      "mobileRedirect": null,
+      "redirectAppLink": {
+        "type": "catalog_section",
+        "webUrl": "https://petrovich.ru/catalog/0/",
+        "pathParams": {
+          "sectionCode": 0
+        }
+      },
+      "sectionGuid": "00000000-0000-0000-0000-000000000000",
+      "code": 0,
+      "title": "Газобетонные блоки ЛСР",
+      "coverImage": "",
+      "seoLink": "/catalog/6619/lsr/",
+      "productQty": 0,
+      "imageTop": null,
+      "viewTypes": [],
+      "isRent": false,
+      "isShowOnHeaderTop": false,
+      "isShowOnMobileMainCatalog": false,
+      "isEcosystemService": false,
+      "isFriendsClubPrize": false
+    }
+  ],
+  "assocBundles": [
+    {
+      "mobileRedirect": null,
+      "redirectAppLink": {
+        "type": "catalog_section",
+        "webUrl": "https://petrovich.ru/catalog/9576110/",
+        "pathParams": {
+          "sectionCode": 9576110
+        }
+      },
+      "sectionGuid": "2c7e9cf0-2219-11ed-a2ba-00155dfcf00f",
+      "code": 9576110,
+      "title": "Рулонная гидроизоляция",
+      "coverImage": "//cs.p-static.ru/image/81555900/original.png",
+      "seoLink": null,
+      "productQty": 0,
+      "imageTop": null,
+      "viewTypes": [
+        "products"
+      ],
+      "isRent": false,
+      "isShowOnHeaderTop": false,
+      "isShowOnMobileMainCatalog": false,
+      "isEcosystemService": false,
+      "isFriendsClubPrize": false
+    },
+    {
+      "mobileRedirect": null,
+      "redirectAppLink": {
+        "type": "catalog_section",
+        "webUrl": "https://petrovich.ru/catalog/285396726/",
+        "pathParams": {
+          "sectionCode": 285396726
+        }
+      },
+      "sectionGuid": "a6e95e58-a3e1-11ee-a2be-00155dfcf425",
+      "code": 285396726,
+      "title": "Кладочные смеси",
+      "coverImage": "//cs.p-static.ru/image/39660190/original.jpg",
+      "seoLink": null,
+      "productQty": 0,
+      "imageTop": null,
+      "viewTypes": [
+        "products"
+      ],
+      "isRent": false,
+      "isShowOnHeaderTop": false,
+      "isShowOnMobileMainCatalog": false,
+      "isEcosystemService": false,
+      "isFriendsClubPrize": false
+    },
+    {
+      "mobileRedirect": null,
+      "redirectAppLink": {
+        "type": "catalog_section",
+        "webUrl": "https://petrovich.ru/catalog/285396727/",
+        "pathParams": {
+          "sectionCode": 285396727
+        }
+      },
+      "sectionGuid": "2125ced4-a3e2-11ee-a2be-00155dfcf425",
+      "code": 285396727,
+      "title": "Сухой клей для блоков и ГКЛ",
+      "coverImage": "//cs.p-static.ru/image/39642137/original.jpg",
+      "seoLink": null,
+      "productQty": 0,
+      "imageTop": null,
+      "viewTypes": [
+        "products"
+      ],
+      "isRent": false,
+      "isShowOnHeaderTop": false,
+      "isShowOnMobileMainCatalog": false,
+      "isEcosystemService": false,
+      "isFriendsClubPrize": false
+    },
+    {
+      "mobileRedirect": null,
+      "redirectAppLink": {
+        "type": "catalog_section",
+        "webUrl": "https://petrovich.ru/catalog/11987/",
+        "pathParams": {
+          "sectionCode": 11987
+        }
+      },
+      "sectionGuid": "e9e4a85a-e397-11e6-95f7-00259036a192",
+      "code": 11987,
+      "title": "Общестроительные клеи",
+      "coverImage": "//cs.p-static.ru/image/1220757/original.jpg",
+      "seoLink": null,
+      "productQty": 0,
+      "imageTop": null,
+      "viewTypes": [
+        "products"
+      ],
+      "isRent": false,
+      "isShowOnHeaderTop": false,
+      "isShowOnMobileMainCatalog": false,
+      "isEcosystemService": false,
+      "isFriendsClubPrize": false
+    },
+    {
+      "mobileRedirect": null,
+      "redirectAppLink": {
+        "type": "catalog_section",
+        "webUrl": "https://petrovich.ru/catalog/12390/",
+        "pathParams": {
+          "sectionCode": 12390
+        }
+      },
+      "sectionGuid": "e9e4a980-e397-11e6-95f7-00259036a192",
+      "code": 12390,
+      "title": "Инструмент для газобетона",
+      "coverImage": "//cs.p-static.ru/image/82366023/original.png",
+      "seoLink": null,
+      "productQty": 0,
+      "imageTop": null,
+      "viewTypes": [
+        "products"
+      ],
+      "isRent": false,
+      "isShowOnHeaderTop": false,
+      "isShowOnMobileMainCatalog": false,
+      "isEcosystemService": false,
+      "isFriendsClubPrize": false
+    },
+    {
+      "mobileRedirect": null,
+      "redirectAppLink": {
+        "type": "catalog_section",
+        "webUrl": "https://petrovich.ru/catalog/10456/",
+        "pathParams": {
+          "sectionCode": 10456
+        }
+      },
+      "sectionGuid": "e9e4a996-e397-11e6-95f7-00259036a192",
+      "code": 10456,
+      "title": "Ножовки, полотна",
+      "coverImage": "//cs.p-static.ru/image/1261856/original.jpg",
+      "seoLink": null,
+      "productQty": 0,
+      "imageTop": null,
+      "viewTypes": [
+        "products"
+      ],
+      "isRent": false,
+      "isShowOnHeaderTop": false,
+      "isShowOnMobileMainCatalog": false,
+      "isEcosystemService": false,
+      "isFriendsClubPrize": false
+    },
+    {
+      "mobileRedirect": null,
+      "redirectAppLink": {
+        "type": "catalog_section",
+        "webUrl": "https://petrovich.ru/catalog/285396427/",
+        "pathParams": {
+          "sectionCode": 285396427
+        }
+      },
+      "sectionGuid": "f6bbe636-1682-11ee-a2ba-00155dfcf00f",
+      "code": 285396427,
+      "title": "Алмазные диски по бетону",
+      "coverImage": "//cs.p-static.ru/image/30374349/original.jpg",
+      "seoLink": null,
+      "productQty": 0,
+      "imageTop": null,
+      "viewTypes": [
+        "products"
+      ],
+      "isRent": false,
+      "isShowOnHeaderTop": false,
+      "isShowOnMobileMainCatalog": false,
+      "isEcosystemService": false,
+      "isFriendsClubPrize": false
+    },
+    {
+      "mobileRedirect": null,
+      "redirectAppLink": {
+        "type": "catalog_section",
+        "webUrl": "https://petrovich.ru/catalog/15611/",
+        "pathParams": {
+          "sectionCode": 15611
+        }
+      },
+      "sectionGuid": "e9e4aa91-e397-11e6-95f7-00259036a192",
+      "code": 15611,
+      "title": "Инжекционная масса",
+      "coverImage": "//cs.p-static.ru/image/94437/original.jpg",
+      "seoLink": null,
+      "productQty": 0,
+      "imageTop": null,
+      "viewTypes": [
+        "products"
+      ],
+      "isRent": false,
+      "isShowOnHeaderTop": false,
+      "isShowOnMobileMainCatalog": false,
+      "isEcosystemService": false,
+      "isFriendsClubPrize": false
+    },
+    {
+      "mobileRedirect": null,
+      "redirectAppLink": {
+        "type": "catalog_section",
+        "webUrl": "https://petrovich.ru/catalog/285396723/",
+        "pathParams": {
+          "sectionCode": 285396723
+        }
+      },
+      "sectionGuid": "56ebf2a8-a3c3-11ee-a2be-00155dfcf425",
+      "code": 285396723,
+      "title": "Сухие штукатурки",
+      "coverImage": "//cs.p-static.ru/image/4603965/original.jpg",
+      "seoLink": null,
+      "productQty": 0,
+      "imageTop": null,
+      "viewTypes": [
+        "products"
+      ],
+      "isRent": false,
+      "isShowOnHeaderTop": false,
+      "isShowOnMobileMainCatalog": false,
+      "isEcosystemService": false,
+      "isFriendsClubPrize": false
+    },
+    {
+      "mobileRedirect": null,
+      "redirectAppLink": {
+        "type": "catalog_section",
+        "webUrl": "https://petrovich.ru/catalog/10475/",
+        "pathParams": {
+          "sectionCode": 10475
+        }
+      },
+      "sectionGuid": "e9e4a9bc-e397-11e6-95f7-00259036a192",
+      "code": 10475,
+      "title": "Правила",
+      "coverImage": "//cs.p-static.ru/image/82376713/original.png",
+      "seoLink": null,
+      "productQty": 0,
+      "imageTop": null,
+      "viewTypes": [
+        "products"
+      ],
+      "isRent": false,
+      "isShowOnHeaderTop": false,
+      "isShowOnMobileMainCatalog": false,
+      "isEcosystemService": false,
+      "isFriendsClubPrize": false
+    },
+    {
+      "mobileRedirect": null,
+      "redirectAppLink": {
+        "type": "catalog_section",
+        "webUrl": "https://petrovich.ru/catalog/9834/",
+        "pathParams": {
+          "sectionCode": 9834
+        }
+      },
+      "sectionGuid": "e9e4a9b3-e397-11e6-95f7-00259036a192",
+      "code": 9834,
+      "title": "Уровни строительные",
+      "coverImage": "//cs.p-static.ru/image/82230022/original.png",
+      "seoLink": null,
+      "productQty": 0,
+      "imageTop": null,
+      "viewTypes": [
+        "products"
+      ],
+      "isRent": false,
+      "isShowOnHeaderTop": false,
+      "isShowOnMobileMainCatalog": false,
+      "isEcosystemService": false,
+      "isFriendsClubPrize": false
+    },
+    {
+      "mobileRedirect": null,
+      "redirectAppLink": {
+        "type": "catalog_section",
+        "webUrl": "https://petrovich.ru/catalog/6615/",
+        "pathParams": {
+          "sectionCode": 6615
+        }
+      },
+      "sectionGuid": "e9e4a883-e397-11e6-95f7-00259036a192",
+      "code": 6615,
+      "title": "Грунтовки",
+      "coverImage": "//cs.p-static.ru/image/14406406/original.jpg",
+      "seoLink": null,
+      "productQty": 0,
+      "imageTop": null,
+      "viewTypes": [
+        "products"
+      ],
+      "isRent": false,
+      "isShowOnHeaderTop": false,
+      "isShowOnMobileMainCatalog": false,
+      "isEcosystemService": false,
+      "isFriendsClubPrize": false
+    },
+    {
+      "mobileRedirect": null,
+      "redirectAppLink": {
+        "type": "catalog_section",
+        "webUrl": "https://petrovich.ru/catalog/12082/",
+        "pathParams": {
+          "sectionCode": 12082
+        }
+      },
+      "sectionGuid": "e9e4a868-e397-11e6-95f7-00259036a192",
+      "code": 12082,
+      "title": "Профиль для гипсокартона",
+      "coverImage": "//cs.p-static.ru/image/1220805/original.jpg",
+      "seoLink": null,
+      "productQty": 0,
+      "imageTop": null,
+      "viewTypes": [
+        "products"
+      ],
+      "isRent": false,
+      "isShowOnHeaderTop": false,
+      "isShowOnMobileMainCatalog": false,
+      "isEcosystemService": false,
+      "isFriendsClubPrize": false
+    },
+    {
+      "mobileRedirect": null,
+      "redirectAppLink": {
+        "type": "catalog_section",
+        "webUrl": "https://petrovich.ru/catalog/95761878/",
+        "pathParams": {
+          "sectionCode": 95761878
+        }
+      },
+      "sectionGuid": "16dbd599-65b5-11ed-a2ba-00155dfcf00f",
+      "code": 95761878,
+      "title": "Минеральная вата",
+      "coverImage": "//cs.p-static.ru/image/26258348/original.jpg",
+      "seoLink": null,
+      "productQty": 0,
+      "imageTop": null,
+      "viewTypes": [
+        "products"
+      ],
+      "isRent": false,
+      "isShowOnHeaderTop": false,
+      "isShowOnMobileMainCatalog": false,
+      "isEcosystemService": false,
+      "isFriendsClubPrize": false
+    },
+    {
+      "mobileRedirect": null,
+      "redirectAppLink": {
+        "type": "catalog_section",
+        "webUrl": "https://petrovich.ru/catalog/224461898/",
+        "pathParams": {
+          "sectionCode": 224461898
+        }
+      },
+      "sectionGuid": "44666e40-7b96-11e9-80c7-00155dfc0c4f",
+      "code": 224461898,
+      "title": "Плиты шумоизоляционные",
+      "coverImage": "//cs.p-static.ru/image/2373470/original.jpg",
+      "seoLink": null,
+      "productQty": 0,
+      "imageTop": null,
+      "viewTypes": [
+        "products"
+      ],
+      "isRent": false,
+      "isShowOnHeaderTop": false,
+      "isShowOnMobileMainCatalog": false,
+      "isEcosystemService": false,
+      "isFriendsClubPrize": false
+    },
+    {
+      "mobileRedirect": null,
+      "redirectAppLink": {
+        "type": "catalog_section",
+        "webUrl": "https://petrovich.ru/catalog/1402/",
+        "pathParams": {
+          "sectionCode": 1402
+        }
+      },
+      "sectionGuid": "e9e4a9aa-e397-11e6-95f7-00259036a192",
+      "code": 1402,
+      "title": "Лестницы строительные",
+      "coverImage": "//cs.p-static.ru/image/82229828/original.png",
+      "seoLink": null,
+      "productQty": 0,
+      "imageTop": null,
+      "viewTypes": [
+        "products"
+      ],
+      "isRent": false,
+      "isShowOnHeaderTop": false,
+      "isShowOnMobileMainCatalog": false,
+      "isEcosystemService": false,
+      "isFriendsClubPrize": false
+    },
+    {
+      "mobileRedirect": null,
+      "redirectAppLink": {
+        "type": "catalog_section",
+        "webUrl": "https://petrovich.ru/catalog/10469/",
+        "pathParams": {
+          "sectionCode": 10469
+        }
+      },
+      "sectionGuid": "e9e4a9b2-e397-11e6-95f7-00259036a192",
+      "code": 10469,
+      "title": "Рулетки",
+      "coverImage": "//cs.p-static.ru/image/82229987/original.png",
+      "seoLink": null,
+      "productQty": 0,
+      "imageTop": null,
+      "viewTypes": [
+        "products"
+      ],
+      "isRent": false,
+      "isShowOnHeaderTop": false,
+      "isShowOnMobileMainCatalog": false,
+      "isEcosystemService": false,
+      "isFriendsClubPrize": false
+    },
+    {
+      "mobileRedirect": null,
+      "redirectAppLink": {
+        "type": "catalog_section",
+        "webUrl": "https://petrovich.ru/catalog/9950/",
+        "pathParams": {
+          "sectionCode": 9950
+        }
+      },
+      "sectionGuid": "e9e4aa50-e397-11e6-95f7-00259036a192",
+      "code": 9950,
+      "title": "Канаты, шнуры, шпагаты",
+      "coverImage": "//cs.p-static.ru/image/1221458/original.jpg",
+      "seoLink": null,
+      "productQty": 0,
+      "imageTop": null,
+      "viewTypes": [
+        "products"
+      ],
+      "isRent": false,
+      "isShowOnHeaderTop": false,
+      "isShowOnMobileMainCatalog": false,
+      "isEcosystemService": false,
+      "isFriendsClubPrize": false
+    },
+    {
+      "mobileRedirect": null,
+      "redirectAppLink": {
+        "type": "catalog_section",
+        "webUrl": "https://petrovich.ru/catalog/244129033/",
+        "pathParams": {
+          "sectionCode": 244129033
+        }
+      },
+      "sectionGuid": "21c37746-b365-11e9-80c7-00155dfc0c4f",
+      "code": 244129033,
+      "title": "Строительные емкости",
+      "coverImage": "//cs.p-static.ru/image/82375333/original.png",
+      "seoLink": null,
+      "productQty": 0,
+      "imageTop": null,
+      "viewTypes": [
+        "products"
+      ],
+      "isRent": false,
+      "isShowOnHeaderTop": false,
+      "isShowOnMobileMainCatalog": false,
+      "isEcosystemService": false,
+      "isFriendsClubPrize": false
+    },
+    {
+      "mobileRedirect": null,
+      "redirectAppLink": {
+        "type": "catalog_section",
+        "webUrl": "https://petrovich.ru/catalog/18955/",
+        "pathParams": {
+          "sectionCode": 18955
+        }
+      },
+      "sectionGuid": "e9e4aa23-e397-11e6-95f7-00259036a192",
+      "code": 18955,
+      "title": "Венчики для строительных миксеров",
+      "coverImage": "//cs.p-static.ru/image/81621758/original.png",
+      "seoLink": null,
+      "productQty": 0,
+      "imageTop": null,
+      "viewTypes": [
+        "products"
+      ],
+      "isRent": false,
+      "isShowOnHeaderTop": false,
+      "isShowOnMobileMainCatalog": false,
+      "isEcosystemService": false,
+      "isFriendsClubPrize": false
+    },
+    {
+      "mobileRedirect": null,
+      "redirectAppLink": {
+        "type": "catalog_section",
+        "webUrl": "https://petrovich.ru/catalog/1414/",
+        "pathParams": {
+          "sectionCode": 1414
+        }
+      },
+      "sectionGuid": "e9e4a94d-e397-11e6-95f7-00259036a192",
+      "code": 1414,
+      "title": "Садовые и строительные тачки",
+      "coverImage": "//cs.p-static.ru/image/69197588/original.png",
+      "seoLink": null,
+      "productQty": 0,
+      "imageTop": null,
+      "viewTypes": [
+        "products"
+      ],
+      "isRent": false,
+      "isShowOnHeaderTop": false,
+      "isShowOnMobileMainCatalog": false,
+      "isEcosystemService": false,
+      "isFriendsClubPrize": false
+    },
+    {
+      "mobileRedirect": null,
+      "redirectAppLink": {
+        "type": "catalog_section",
+        "webUrl": "https://petrovich.ru/catalog/19216/",
+        "pathParams": {
+          "sectionCode": 19216
+        }
+      },
+      "sectionGuid": "e9e4a9af-e397-11e6-95f7-00259036a192",
+      "code": 19216,
+      "title": "Маркеры, карандаши, мел",
+      "coverImage": "//cs.p-static.ru/image/82229884/original.png",
+      "seoLink": null,
+      "productQty": 0,
+      "imageTop": null,
+      "viewTypes": [
+        "products"
+      ],
+      "isRent": false,
+      "isShowOnHeaderTop": false,
+      "isShowOnMobileMainCatalog": false,
+      "isEcosystemService": false,
+      "isFriendsClubPrize": false
+    },
+    {
+      "mobileRedirect": null,
+      "redirectAppLink": {
+        "type": "catalog_section",
+        "webUrl": "https://petrovich.ru/catalog/10468/",
+        "pathParams": {
+          "sectionCode": 10468
+        }
+      },
+      "sectionGuid": "e9e4a9b1-e397-11e6-95f7-00259036a192",
+      "code": 10468,
+      "title": "Линейки, угольники",
+      "coverImage": "//cs.p-static.ru/image/82229875/original.png",
+      "seoLink": null,
+      "productQty": 0,
+      "imageTop": null,
+      "viewTypes": [
+        "products"
+      ],
+      "isRent": false,
+      "isShowOnHeaderTop": false,
+      "isShowOnMobileMainCatalog": false,
+      "isEcosystemService": false,
+      "isFriendsClubPrize": false
+    },
+    {
+      "mobileRedirect": null,
+      "redirectAppLink": {
+        "type": "catalog_section",
+        "webUrl": "https://petrovich.ru/catalog/9576109/",
+        "pathParams": {
+          "sectionCode": 9576109
+        }
+      },
+      "sectionGuid": "6bcd2160-1fbe-11ed-a2ba-00155dfcf00f",
+      "code": 9576109,
+      "title": "Укрывные и защитные материалы",
+      "coverImage": "//cs.p-static.ru/image/81555721/original.png",
+      "seoLink": null,
+      "productQty": 0,
+      "imageTop": null,
+      "viewTypes": [
+        "products"
+      ],
+      "isRent": false,
+      "isShowOnHeaderTop": false,
+      "isShowOnMobileMainCatalog": false,
+      "isEcosystemService": false,
+      "isFriendsClubPrize": false
+    },
+    {
+      "mobileRedirect": null,
+      "redirectAppLink": {
+        "type": "catalog_section",
+        "webUrl": "https://petrovich.ru/catalog/285396669/",
+        "pathParams": {
+          "sectionCode": 285396669
+        }
+      },
+      "sectionGuid": "b878601b-927e-11ee-a2be-00155dfcf425",
+      "code": 285396669,
+      "title": "Перчатки",
+      "coverImage": "//cs.p-static.ru/image/38093412/original.jpg",
+      "seoLink": null,
+      "productQty": 0,
+      "imageTop": null,
+      "viewTypes": [
+        "products"
+      ],
+      "isRent": false,
+      "isShowOnHeaderTop": false,
+      "isShowOnMobileMainCatalog": false,
+      "isEcosystemService": false,
+      "isFriendsClubPrize": false
+    },
+    {
+      "mobileRedirect": null,
+      "redirectAppLink": {
+        "type": "catalog_section",
+        "webUrl": "https://petrovich.ru/catalog/285396682/",
+        "pathParams": {
+          "sectionCode": 285396682
+        }
+      },
+      "sectionGuid": "00543464-9367-11ee-a2be-00155dfcf425",
+      "code": 285396682,
+      "title": "Комбинезоны и полукомбинезоны",
+      "coverImage": "//cs.p-static.ru/image/38188000/original.jpg",
+      "seoLink": null,
+      "productQty": 0,
+      "imageTop": null,
+      "viewTypes": [
+        "products"
+      ],
+      "isRent": false,
+      "isShowOnHeaderTop": false,
+      "isShowOnMobileMainCatalog": false,
+      "isEcosystemService": false,
+      "isFriendsClubPrize": false
+    }
+  ],
+  "checkoutType": "regular",
+  "type": "regular",
+  "plannedReceiptDateTs": null,
+  "hasAltUnit": true,
+  "isService": false,
+  "isWaitSupply": false,
+  "isActive": true,
+  "isCalc": false,
+  "isDigital": false,
+  "isCanBuy": true,
+  "purchaseFlow": "buy",
+  "isCityDefined": true,
+  "isInWizart": false,
+  "isMarked": false,
+  "isLimitTenMeters": false,
+  "isAvailablePickupPoint": false,
+  "hasAssocServices": false,
+  "services": null,
+  "servicesData": [],
+  "specialTerms": null,
+  "unitTitle": "шт",
+  "unitTitleAlt": "м3",
+  "unitTitleFull": {
+    "tvorit": "штуками",
+    "vinit": "штуку",
+    "imenit": "штука"
+  },
+  "unitTimeTitle": null,
+  "unitTimeTitleFull": null,
+  "unitRatio": 1,
+  "unitRatioAlt": 0.016,
+  "weight": 10.5,
+  "properties": [
+    {
+      "key": "tip_tovara",
+      "slug": "tip_tovara",
+      "title": "Тип товара",
+      "value": [
+        {
+          "slug": "gazobetonnyi_blok",
+          "title": "Газобетонный блок",
+          "link": "/catalog/6619/gazobetonnye-bloki/"
+        }
+      ],
+      "unit": "",
+      "unitData": {
+        "title": "",
+        "slug": ""
+      },
+      "unitSlug": "",
+      "isCompare": true,
+      "isDescription": true
+    },
+    {
+      "key": "brend",
+      "slug": "brend",
+      "title": "Бренд",
+      "value": [
+        {
+          "slug": "lsr",
+          "title": "ЛСР",
+          "link": "/catalog/6619/lsr/"
+        }
+      ],
+      "unit": "",
+      "unitData": {
+        "title": "",
+        "slug": ""
+      },
+      "unitSlug": "",
+      "isCompare": true,
+      "isDescription": true
+    },
+    {
+      "key": "primenenie",
+      "slug": "primenenie",
+      "title": "Применение",
+      "value": [
+        {
+          "slug": "peregorodki",
+          "title": "Перегородки",
+          "link": "/catalog/6619/gazobloki-peregorodochnye/"
+        }
+      ],
+      "unit": "",
+      "unitData": {
+        "title": "",
+        "slug": ""
+      },
+      "unitSlug": "",
+      "isCompare": true,
+      "isDescription": true
+    },
+    {
+      "key": "marka_plotnosti",
+      "slug": "marka_plotnosti",
+      "title": "Марка плотности",
+      "value": [
+        {
+          "slug": "d_500",
+          "title": "D 500",
+          "link": null
+        }
+      ],
+      "unit": "",
+      "unitData": {
+        "title": "",
+        "slug": ""
+      },
+      "unitSlug": "",
+      "isCompare": true,
+      "isDescription": true
+    },
+    {
+      "key": "morozostoikost",
+      "slug": "morozostoikost",
+      "title": "Морозостойкость",
+      "value": [
+        {
+          "slug": "f75",
+          "title": "F75",
+          "link": null
+        }
+      ],
+      "unit": "",
+      "unitData": {
+        "title": "",
+        "slug": ""
+      },
+      "unitSlug": "",
+      "isCompare": true,
+      "isDescription": true
+    },
+    {
+      "key": "teploprovodnost",
+      "slug": "teploprovodnost",
+      "title": "Теплопроводность",
+      "value": [
+        {
+          "slug": "0d131_vt_s_mdegs",
+          "title": "0,131 Вт/м°С",
+          "link": null
+        }
+      ],
+      "unit": "",
+      "unitData": {
+        "title": "",
+        "slug": ""
+      },
+      "unitSlug": "",
+      "isCompare": true,
+      "isDescription": true
+    },
+    {
+      "key": "klass_prochnosti",
+      "slug": "klass_prochnosti",
+      "title": "Класс прочности",
+      "value": [
+        {
+          "slug": "v2d5m3d5",
+          "title": "В2,5-3,5",
+          "link": null
+        }
+      ],
+      "unit": "",
+      "unitData": {
+        "title": "",
+        "slug": ""
+      },
+      "unitSlug": "",
+      "isCompare": true,
+      "isDescription": true
+    },
+    {
+      "key": "vlagostoikost",
+      "slug": "vlagostoikost",
+      "title": "Влагостойкость",
+      "value": [
+        {
+          "slug": "net",
+          "title": "Нет",
+          "link": null
+        }
+      ],
+      "unit": "",
+      "unitData": {
+        "title": "",
+        "slug": ""
+      },
+      "unitSlug": "",
+      "isCompare": true,
+      "isDescription": true
+    },
+    {
+      "key": "tolschina|mm",
+      "slug": "tolschina",
+      "title": "Толщина",
+      "value": [
+        {
+          "slug": "100",
+          "title": "100",
+          "link": null
+        }
+      ],
+      "unit": "мм",
+      "unitData": {
+        "title": "мм",
+        "slug": "mm"
+      },
+      "unitSlug": "mm",
+      "isCompare": true,
+      "isDescription": true
+    },
+    {
+      "key": "vysota|mm",
+      "slug": "vysota",
+      "title": "Высота",
+      "value": [
+        {
+          "slug": "250",
+          "title": "250",
+          "link": null
+        }
+      ],
+      "unit": "мм",
+      "unitData": {
+        "title": "мм",
+        "slug": "mm"
+      },
+      "unitSlug": "mm",
+      "isCompare": true,
+      "isDescription": true
+    },
+    {
+      "key": "dlina|mm",
+      "slug": "dlina",
+      "title": "Длина",
+      "value": [
+        {
+          "slug": "625",
+          "title": "625",
+          "link": null
+        }
+      ],
+      "unit": "мм",
+      "unitData": {
+        "title": "мм",
+        "slug": "mm"
+      },
+      "unitSlug": "mm",
+      "isCompare": true,
+      "isDescription": true
+    },
+    {
+      "key": "kolichestvo_v_1_m2",
+      "slug": "kolichestvo_v_1_m2",
+      "title": "Количество в 1 м2",
+      "value": [
+        {
+          "slug": "6d4_shtd",
+          "title": "6,4 шт.",
+          "link": null
+        }
+      ],
+      "unit": "",
+      "unitData": {
+        "title": "",
+        "slug": ""
+      },
+      "unitSlug": "",
+      "isCompare": true,
+      "isDescription": true
+    },
+    {
+      "key": "kolichestvo_v_1_m3",
+      "slug": "kolichestvo_v_1_m3",
+      "title": "Количество в 1 м3",
+      "value": [
+        {
+          "slug": "64_shtd",
+          "title": "64 шт.",
+          "link": null
+        }
+      ],
+      "unit": "",
+      "unitData": {
+        "title": "",
+        "slug": ""
+      },
+      "unitSlug": "",
+      "isCompare": true,
+      "isDescription": true
+    },
+    {
+      "key": "vodopogloschenie|__1",
+      "slug": "vodopogloschenie",
+      "title": "Водопоглощение",
+      "value": [
+        {
+          "slug": "ne_menee_6",
+          "title": "Не менее 6",
+          "link": null
+        }
+      ],
+      "unit": "%",
+      "unitData": {
+        "title": "%",
+        "slug": "__1"
+      },
+      "unitSlug": "__1",
+      "isCompare": true,
+      "isDescription": true
+    },
+    {
+      "key": "sposob_proizvodstva",
+      "slug": "sposob_proizvodstva",
+      "title": "Способ производства",
+      "value": [
+        {
+          "slug": "avtoklav",
+          "title": "Автоклав",
+          "link": null
+        }
+      ],
+      "unit": "",
+      "unitData": {
+        "title": "",
+        "slug": ""
+      },
+      "unitSlug": "",
+      "isCompare": true,
+      "isDescription": true
+    },
+    {
+      "key": "deklaraciya_sootvetstviya",
+      "slug": "deklaraciya_sootvetstviya",
+      "title": "Декларация соответствия",
+      "value": [
+        {
+          "slug": "gost_31360m2007",
+          "title": "ГОСТ 31360-2007",
+          "link": null
+        }
+      ],
+      "unit": "",
+      "unitData": {
+        "title": "",
+        "slug": ""
+      },
+      "unitSlug": "",
+      "isCompare": true,
+      "isDescription": true
+    },
+    {
+      "key": "stranamproizvoditel",
+      "slug": "stranamproizvoditel",
+      "title": "Страна-производитель",
+      "value": [
+        {
+          "slug": "rossiya",
+          "title": "Россия",
+          "link": null
+        }
+      ],
+      "unit": "",
+      "unitData": {
+        "title": "",
+        "slug": ""
+      },
+      "unitSlug": "",
+      "isCompare": true,
+      "isDescription": true
+    },
+    {
+      "key": "chasto_ischut",
+      "slug": "chasto_ischut",
+      "title": "Часто ищут",
+      "value": [
+        {
+          "slug": "yacheistyi_beton",
+          "title": "Ячеистый бетон",
+          "link": null
+        }
+      ],
+      "unit": "",
+      "unitData": {
+        "title": "",
+        "slug": ""
+      },
+      "unitSlug": "",
+      "isCompare": false,
+      "isDescription": false
+    },
+    {
+      "slug": "ves",
+      "title": "Вес",
+      "value": [
+        {
+          "slug": "10_5_kg",
+          "title": "10,5",
+          "link": null
+        }
+      ],
+      "unit": "кг",
+      "isCompare": true,
+      "isDescription": true
+    }
+  ],
+  "height": 250,
+  "length": 625,
+  "width": 100,
+  "incrementStep": 1,
+  "remains": {
+    "scheme": "default",
+    "isT1": false,
+    "availability": "available",
+    "accessibility": "now",
+    "title": "Доступно сегодня",
+    "listingTitle": "Доступно сегодня",
+    "pageTitle": "Доступно сегодня",
+    "description": null,
+    "icon": "available",
+    "isNeededChooseRfCity": false,
+    "supplyWays": [
+      {
+        "supplyWayType": "in_stock",
+        "title": "Доступно со склада самовывоза",
+        "total": 15348,
+        "deliveryType": null,
+        "requestDate": null,
+        "supplyDate": null,
+        "isShowRemainsAmount": true,
+        "subdivisionList": [
+          {
+            "code": "spb_tlnk",
+            "isFew": false,
+            "remainsAmount": 3619,
+            "supplyAmount": 0,
+            "totalAmount": 3619,
+            "subdivisionTitle": "Таллинское",
+            "isShowOnMap": true,
+            "isOwnPickupPoint": false,
+            "isAroundTheClock": true
+          },
+          {
+            "code": "spb_prns",
+            "isFew": true,
+            "remainsAmount": 127,
+            "supplyAmount": 0,
+            "totalAmount": 127,
+            "subdivisionTitle": "Парнас",
+            "isShowOnMap": true,
+            "isOwnPickupPoint": false,
+            "isAroundTheClock": false
+          },
+          {
+            "code": "spb_sever",
+            "isFew": false,
+            "remainsAmount": 3036,
+            "supplyAmount": 0,
+            "totalAmount": 3036,
+            "subdivisionTitle": "КАД Север",
+            "isShowOnMap": true,
+            "isOwnPickupPoint": false,
+            "isAroundTheClock": true
+          },
+          {
+            "code": "spb_mrm",
+            "isFew": false,
+            "remainsAmount": 3127,
+            "supplyAmount": 0,
+            "totalAmount": 3127,
+            "subdivisionTitle": "Мурманское ш.",
+            "isShowOnMap": true,
+            "isOwnPickupPoint": false,
+            "isAroundTheClock": true
+          },
+          {
+            "code": "spb_sfska",
+            "isFew": false,
+            "remainsAmount": 1267,
+            "supplyAmount": 0,
+            "totalAmount": 1267,
+            "subdivisionTitle": "Софийская",
+            "isShowOnMap": true,
+            "isOwnPickupPoint": false,
+            "isAroundTheClock": true
+          },
+          {
+            "code": "spb_plnrn",
+            "isFew": false,
+            "remainsAmount": 1111,
+            "supplyAmount": 0,
+            "totalAmount": 1111,
+            "subdivisionTitle": "Планерная",
+            "isShowOnMap": true,
+            "isOwnPickupPoint": false,
+            "isAroundTheClock": true
+          },
+          {
+            "code": "spb_industr",
+            "isFew": false,
+            "remainsAmount": 2949,
+            "supplyAmount": 0,
+            "totalAmount": 2949,
+            "subdivisionTitle": "Индустриальный",
+            "isShowOnMap": true,
+            "isOwnPickupPoint": false,
+            "isAroundTheClock": true
+          },
+          {
+            "code": "spb_slvnk",
+            "isFew": true,
+            "remainsAmount": 112,
+            "supplyAmount": 0,
+            "totalAmount": 112,
+            "subdivisionTitle": "Славянка",
+            "isShowOnMap": true,
+            "isOwnPickupPoint": false,
+            "isAroundTheClock": false
+          }
+        ]
+      }
+    ],
+    "supplyToStock": {
+      "title": "Привезем в магазины",
+      "list": [
+        {
+          "deliveryType": "date",
+          "requestDate": 1791404040,
+          "requestDateTitle": "при заказе до 07/10 до 23:15",
+          "supplyDate": 1791439200,
+          "supplyDateTitle": "08/10 в 09:00",
+          "total": 6568,
+          "isShowRemainsAmount": false,
+          "subdivisionList": [
+            {
+              "code": "spb_pvz_len",
+              "isFew": null,
+              "remainsAmount": 0,
+              "supplyAmount": 3619,
+              "totalAmount": 3619,
+              "subdivisionTitle": "Петрович Рядом Ленинский проспект",
+              "isShowOnMap": true,
+              "isOwnPickupPoint": true,
+              "isAroundTheClock": false
+            },
+            {
+              "code": "vsvlz_pvz",
+              "isFew": null,
+              "remainsAmount": 0,
+              "supplyAmount": 2949,
+              "totalAmount": 2949,
+              "subdivisionTitle": "Петрович Рядом Всеволожск",
+              "isShowOnMap": true,
+              "isOwnPickupPoint": true,
+              "isAroundTheClock": false
+            }
+          ]
+        },
+        {
+          "deliveryType": "date",
+          "requestDate": 1791405900,
+          "requestDateTitle": "при заказе до 07/10 до 23:45",
+          "supplyDate": 1791444600,
+          "supplyDateTitle": "08/10 в 10:30",
+          "total": 3036,
+          "isShowRemainsAmount": false,
+          "subdivisionList": [
+            {
+              "code": "spb_pvz_odo",
+              "isFew": null,
+              "remainsAmount": 0,
+              "supplyAmount": 3036,
+              "totalAmount": 3036,
+              "subdivisionTitle": "Петрович Рядом улица Одоевского",
+              "isShowOnMap": true,
+              "isOwnPickupPoint": true,
+              "isAroundTheClock": false
+            }
+          ]
+        }
+      ]
+    },
+    "supplyToOwnPickupPoint": {
+      "title": "Привезем в мини-магазины Петрович.Рядом",
+      "list": [
+        {
+          "deliveryType": "date",
+          "requestDate": 1791404040,
+          "requestDateTitle": "при заказе до 07/10 до 23:15",
+          "supplyDate": 1791439200,
+          "supplyDateTitle": "08/10 в 09:00",
+          "total": 6568,
+          "isShowRemainsAmount": false,
+          "subdivisionList": [
+            {
+              "code": "spb_pvz_len",
+              "isFew": null,
+              "remainsAmount": 0,
+              "supplyAmount": 3619,
+              "totalAmount": 3619,
+              "subdivisionTitle": "Петрович Рядом Ленинский проспект",
+              "isShowOnMap": true,
+              "isOwnPickupPoint": true,
+              "isAroundTheClock": false
+            },
+            {
+              "code": "vsvlz_pvz",
+              "isFew": null,
+              "remainsAmount": 0,
+              "supplyAmount": 2949,
+              "totalAmount": 2949,
+              "subdivisionTitle": "Петрович Рядом Всеволожск",
+              "isShowOnMap": true,
+              "isOwnPickupPoint": true,
+              "isAroundTheClock": false
+            }
+          ]
+        },
+        {
+          "deliveryType": "date",
+          "requestDate": 1791405900,
+          "requestDateTitle": "при заказе до 07/10 до 23:45",
+          "supplyDate": 1791444600,
+          "supplyDateTitle": "08/10 в 10:30",
+          "total": 3036,
+          "isShowRemainsAmount": false,
+          "subdivisionList": [
+            {
+              "code": "spb_pvz_odo",
+              "isFew": null,
+              "remainsAmount": 0,
+              "supplyAmount": 3036,
+              "totalAmount": 3036,
+              "subdivisionTitle": "Петрович Рядом улица Одоевского",
+              "isShowOnMap": true,
+              "isOwnPickupPoint": true,
+              "isAroundTheClock": false
+            }
+          ]
+        }
+      ]
+    },
+    "supplyToPickupPoint": null,
+    "delivery": {
+      "title": "Доставка",
+      "list": [
+        {
+          "type": "today",
+          "title": "Сегодня",
+          "description": "Сегодня, 15109 шт",
+          "total": 15109,
+          "requestDate": null,
+          "requestDateTitle": null,
+          "supplyDate": 1791320400
+        }
+      ],
+      "condition": {
+        "title": "Опоздаем — доставка бесплатно"
+      }
+    },
+    "isHaveOneSubdivision": false,
+    "selfDelivery": {
+      "inStock": {
+        "titleStructure": [
+          {
+            "titlePart": "Сегодня из 8 магазинов",
+            "isClickable": false
+          }
+        ],
+        "total": 15348,
+        "subdivisionList": [
+          {
+            "code": "spb_tlnk",
+            "isFew": false,
+            "remainsAmount": 3619,
+            "supplyAmount": 0,
+            "totalAmount": 3619,
+            "subdivisionTitle": "Таллинское",
+            "isShowOnMap": true,
+            "isOwnPickupPoint": false,
+            "isAroundTheClock": true
+          },
+          {
+            "code": "spb_prns",
+            "isFew": true,
+            "remainsAmount": 127,
+            "supplyAmount": 0,
+            "totalAmount": 127,
+            "subdivisionTitle": "Парнас",
+            "isShowOnMap": true,
+            "isOwnPickupPoint": false,
+            "isAroundTheClock": false
+          },
+          {
+            "code": "spb_sever",
+            "isFew": false,
+            "remainsAmount": 3036,
+            "supplyAmount": 0,
+            "totalAmount": 3036,
+            "subdivisionTitle": "КАД Север",
+            "isShowOnMap": true,
+            "isOwnPickupPoint": false,
+            "isAroundTheClock": true
+          },
+          {
+            "code": "spb_mrm",
+            "isFew": false,
+            "remainsAmount": 3127,
+            "supplyAmount": 0,
+            "totalAmount": 3127,
+            "subdivisionTitle": "Мурманское ш.",
+            "isShowOnMap": true,
+            "isOwnPickupPoint": false,
+            "isAroundTheClock": true
+          },
+          {
+            "code": "spb_sfska",
+            "isFew": false,
+            "remainsAmount": 1267,
+            "supplyAmount": 0,
+            "totalAmount": 1267,
+            "subdivisionTitle": "Софийская",
+            "isShowOnMap": true,
+            "isOwnPickupPoint": false,
+            "isAroundTheClock": true
+          },
+          {
+            "code": "spb_plnrn",
+            "isFew": false,
+            "remainsAmount": 1111,
+            "supplyAmount": 0,
+            "totalAmount": 1111,
+            "subdivisionTitle": "Планерная",
+            "isShowOnMap": true,
+            "isOwnPickupPoint": false,
+            "isAroundTheClock": true
+          },
+          {
+            "code": "spb_industr",
+            "isFew": false,
+            "remainsAmount": 2949,
+            "supplyAmount": 0,
+            "totalAmount": 2949,
+            "subdivisionTitle": "Индустриальный",
+            "isShowOnMap": true,
+            "isOwnPickupPoint": false,
+            "isAroundTheClock": true
+          },
+          {
+            "code": "spb_slvnk",
+            "isFew": true,
+            "remainsAmount": 112,
+            "supplyAmount": 0,
+            "totalAmount": 112,
+            "subdivisionTitle": "Славянка",
+            "isShowOnMap": true,
+            "isOwnPickupPoint": false,
+            "isAroundTheClock": false
+          }
+        ],
+        "condition": {
+          "title": "Бесплатно"
+        }
+      },
+      "supplyToStock": [
+        {
+          "titleStructure": [
+            {
+              "titlePart": "Завтра из 3 магазинов",
+              "isClickable": false
+            }
+          ],
+          "total": 9604,
+          "list": [
+            {
+              "titleStructure": [
+                {
+                  "titlePart": "В 09:00 при заказе сегодня до 23:14",
+                  "isClickable": false
+                }
+              ],
+              "requestDate": 1791404040,
+              "supplyDate": 1791439200,
+              "subdivisionList": [
+                {
+                  "code": "spb_pvz_len",
+                  "isFew": false,
+                  "remainsAmount": 0,
+                  "supplyAmount": 3619,
+                  "totalAmount": 3619,
+                  "subdivisionTitle": "Петрович Рядом Ленинский проспект",
+                  "isShowOnMap": true,
+                  "isOwnPickupPoint": true,
+                  "isAroundTheClock": false
+                },
+                {
+                  "code": "vsvlz_pvz",
+                  "isFew": false,
+                  "remainsAmount": 0,
+                  "supplyAmount": 2949,
+                  "totalAmount": 2949,
+                  "subdivisionTitle": "Петрович Рядом Всеволожск",
+                  "isShowOnMap": true,
+                  "isOwnPickupPoint": true,
+                  "isAroundTheClock": false
+                }
+              ]
+            },
+            {
+              "titleStructure": [
+                {
+                  "titlePart": "В 10:30 при заказе сегодня до 23:45",
+                  "isClickable": false
+                }
+              ],
+              "requestDate": 1791405900,
+              "supplyDate": 1791444600,
+              "subdivisionList": [
+                {
+                  "code": "spb_pvz_odo",
+                  "isFew": false,
+                  "remainsAmount": 0,
+                  "supplyAmount": 3036,
+                  "totalAmount": 3036,
+                  "subdivisionTitle": "Петрович Рядом улица Одоевского",
+                  "isShowOnMap": true,
+                  "isOwnPickupPoint": true,
+                  "isAroundTheClock": false
+                }
+              ]
+            }
+          ],
+          "condition": {
+            "title": "Бесплатно"
+          }
+        }
+      ],
+      "supplyToPickupPoint": null,
+      "summarySubdivisions": [
+        {
+          "code": "spb_tlnk",
+          "remainsAmount": 3619,
+          "supplyAmount": 0,
+          "icon": "check-circle",
+          "listTitle": "В наличии 3619 шт",
+          "mapTitle": "3619 шт",
+          "pinColor": "#05AD20"
+        },
+        {
+          "code": "spb_prns",
+          "remainsAmount": 127,
+          "supplyAmount": 0,
+          "icon": "check-circle",
+          "listTitle": "В наличии 127 шт",
+          "mapTitle": "127 шт",
+          "pinColor": "#05AD20"
+        },
+        {
+          "code": "spb_sever",
+          "remainsAmount": 3036,
+          "supplyAmount": 0,
+          "icon": "check-circle",
+          "listTitle": "В наличии 3036 шт",
+          "mapTitle": "3036 шт",
+          "pinColor": "#05AD20"
+        },
+        {
+          "code": "spb_mrm",
+          "remainsAmount": 3127,
+          "supplyAmount": 0,
+          "icon": "check-circle",
+          "listTitle": "В наличии 3127 шт",
+          "mapTitle": "3127 шт",
+          "pinColor": "#05AD20"
+        },
+        {
+          "code": "spb_sfska",
+          "remainsAmount": 1267,
+          "supplyAmount": 0,
+          "icon": "check-circle",
+          "listTitle": "В наличии 1267 шт",
+          "mapTitle": "1267 шт",
+          "pinColor": "#05AD20"
+        },
+        {
+          "code": "spb_plnrn",
+          "remainsAmount": 1111,
+          "supplyAmount": 0,
+          "icon": "check-circle",
+          "listTitle": "В наличии 1111 шт",
+          "mapTitle": "1111 шт",
+          "pinColor": "#05AD20"
+        },
+        {
+          "code": "spb_industr",
+          "remainsAmount": 2949,
+          "supplyAmount": 0,
+          "icon": "check-circle",
+          "listTitle": "В наличии 2949 шт",
+          "mapTitle": "2949 шт",
+          "pinColor": "#05AD20"
+        },
+        {
+          "code": "spb_slvnk",
+          "remainsAmount": 112,
+          "supplyAmount": 0,
+          "icon": "check-circle",
+          "listTitle": "В наличии 112 шт",
+          "mapTitle": "112 шт",
+          "pinColor": "#05AD20"
+        },
+        {
+          "code": "spb_pvz_len",
+          "remainsAmount": 0,
+          "supplyAmount": 3619,
+          "icon": "clock",
+          "listTitle": "Привезем 3619 шт завтра при заказе сегодня до 23:14",
+          "mapTitle": "Привезем",
+          "pinColor": "#FF8640",
+          "requestDate": 1791404040,
+          "supplyDate": 1791439200
+        },
+        {
+          "code": "vsvlz_pvz",
+          "remainsAmount": 0,
+          "supplyAmount": 2949,
+          "icon": "clock",
+          "listTitle": "Привезем 2949 шт завтра при заказе сегодня до 23:14",
+          "mapTitle": "Привезем",
+          "pinColor": "#FF8640",
+          "requestDate": 1791404040,
+          "supplyDate": 1791439200
+        },
+        {
+          "code": "spb_pvz_odo",
+          "remainsAmount": 0,
+          "supplyAmount": 3036,
+          "icon": "clock",
+          "listTitle": "Привезем 3036 шт завтра при заказе сегодня до 23:45",
+          "mapTitle": "Привезем",
+          "pinColor": "#FF8640",
+          "requestDate": 1791405900,
+          "supplyDate": 1791444600
+        }
+      ]
+    },
+    "condition": null
+  },
+  "links": {
+    "calculation": "https://shopexpert.petrovich.ru/"
+  },
+  "rating": 4.4,
+  "reviewCount": 27,
+  "isShowAltUnitFirst": true,
+  "rent": {
+    "isRent": false,
+    "rentComplianceProductCode": null,
+    "rentDaysLimit": 999,
+    "rentKits": []
+  },
+  "kit": {
+    "components": []
+  },
+  "hasAnalogues": true,
+  "badges": [
+    {
+      "shortTitle": "Выгодное предложение",
+      "tooltip": {
+        "type": "text",
+        "title": "Получите выгоду 2% при покупке на сумму от 14 580 рублей",
+        "description": [
+          {
+            "descriptionPart": "Получите выгоду 2% при покупке газобетона ЛСР на сумму от 14 580 рублей. Акция для физ. лиц.",
+            "isClickable": false,
+            "link": null
+          }
+        ],
+        "redirectAppLink": {
+          "type": "promo",
+          "webUrl": "https://petrovich.ru/promos/38825/?sort=popularity_desc",
+          "pathParams": {
+            "id": 38825
+          },
+          "queryParams": {
+            "sort": "popularity_desc"
+          }
+        }
+      },
+      "color": "#ED1C25",
+      "isSale": false,
+      "textColor": "#FFFFFF"
+    }
+  ],
+  "isBooster": false,
+  "isAgeRestricted": false,
+  "price": {
+    "gold": 113.91,
+    "retail": 113.91,
+    "points": null,
+    "individual": null,
+    "previousPriceRetail": null,
+    "priceRent": null,
+    "priceRentDeposit": null,
+    "priceRentUnreturn": null
+  },
+  "priceAlt": {
+    "gold": 7290.24,
+    "retail": 7290.24,
+    "individual": null,
+    "previousPriceRetail": null,
+    "priceRent": null,
+    "priceRentDeposit": null,
+    "priceRentUnreturn": null
+  },
+  "bonus": 0,
+  "attributes": null,
+  "isNotInStock": false,
+  "isInfiniteShelf": false,
+  "isSolitaryShipping": false,
+  "isInShowroom": false,
+  "isGiftCertificate": false,
+  "gift": null,
+  "promos": [
+    {
+      "promoId": 38825,
+      "promoGuid": "00000000-0000-0000-0000-000000000000",
+      "contextId": 3834,
+      "title": "Получите выгоду 2% при покупке на сумму от 14 580 рублей",
+      "titleShort": "Выгодное предложение",
+      "titleActivity": "С 26 сентября по 31 октября",
+      "description": "Получите выгоду 2% при покупке газобетона ЛСР на сумму от 14 580 рублей. Акция для физ. лиц.",
+      "descriptionFull": "<p>С 26 сентября по 31 октября 2026 года при единовременной покупке газобетона ЛСР из списка товаров акции на сумму от 14 580 (четырнадцати тысяч пятисот восьмидесяти) рублей в одном чеке вы получаете выгоду 2%. Акция для физических лиц/</p>",
+      "descLink": "",
+      "beginDateTs": 1790370000,
+      "endDateTs": 1793480340,
+      "isUnlimited": false,
+      "isSet": false,
+      "isGift": false,
+      "isShowWithSections": false,
+      "isShowWithProducts": true,
+      "type": "profit",
+      "color": "#ED1C25",
+      "icon": "",
+      "banners": null,
+      "bannerPreview": "",
+      "promoRules": "",
+      "promoSteps": null,
+      "isOnlyFizUser": true,
+      "descriptionForOnlyFizUser": "",
+      "mobile": {
+        "icon": "",
+        "banner": "",
+        "mobileBannerForCatalogPage": "",
+        "homePageBannerPosition": "",
+        "homePageBannerCarousel": "",
+        "color": "#000000"
+      },
+      "isLanding": false,
+      "imageAspectRatio": null,
+      "landingPhoto": "",
+      "isShowOnMainTop": false,
+      "isShowOnMainBottom": false,
+      "imageTop": "",
+      "designGuid": null,
+      "isShelf": false,
+      "adName": "",
+      "adToken": "",
+      "inn": "",
+      "shelfLink": "",
+      "isShowMarking": false
+    }
+  ],
+  "supplyDays": 4,
+  "description": "<p class=\"product-description-text\">Газобетон  – ячеистый бетон автоклавного твердения.\r\nПредназначен для возведения перегородок в малоэтажном строительстве, в высотном строительстве газобетонные блоки применяются при монолитно-каркасном строительстве зданий.\r\nГазобетонные блоки толщиной 85 мм, 100 мм и 150 мм используются для возведения перегородок, блоки толщиной 200 мм и 250 мм  – для возведения наружных стен зданий с сезонным проживанием с весны по осень, блоки толщиной 300 мм, 375 мм и 400 мм для возведения наружных стен зданий с круглогодичным проживанием.</p><p class=\"product-description-title\">Количество блоков на поддоне зависит от завода-изготовителя</p><p class=\"product-description-text\">90/128 шт.</p><p class=\"product-description-title\">                           </p><p class=\"product-description-text\">Обращаем внимание, что в характеристиках товара указан расчетный максимальный вес блока после автоклава с допустимой влажностью. Расчет веса 1 шт. блока учитывает влажность после автоклавирования и ведется по формуле  – объем 1 блока х плотность в сухом состоянии +35%/40%.</p><p class=\"product-description-title\">Состав</p><p class=\"product-description-text\">Цемент, кварцевый песок, известь, гипс, вода.</p>",
+  "descriptionNoHtml": {
+    "description": "Газобетон  – ячеистый бетон автоклавного твердения.\r\nПредназначен для возведения перегородок в малоэтажном строительстве, в высотном строительстве газобетонные блоки применяются при монолитно-каркасном строительстве зданий.\r\nГазобетонные блоки толщиной 85 мм, 100 мм и 150 мм используются для возведения перегородок, блоки толщиной 200 мм и 250 мм  – для возведения наружных стен зданий с сезонным проживанием с весны по осень, блоки толщиной 300 мм, 375 мм и 400 мм для возведения наружных стен зданий с круглогодичным проживанием.",
+    "properties": [
+      {
+        "key": "Количество блоков на поддоне зависит от завода-изготовителя",
+        "value": "90/128 шт.",
+        "values": []
+      },
+      {
+        "key": "                           ",
+        "value": "Обращаем внимание, что в характеристиках товара указан расчетный максимальный вес блока после автоклава с допустимой влажностью. Расчет веса 1 шт. блока учитывает влажность после автоклавирования и ведется по формуле  – объем 1 блока х плотность в сухом состоянии +35%/40%.",
+        "values": []
+      },
+      {
+        "key": "Состав",
+        "value": "Цемент, кварцевый песок, известь, гипс, вода.",
+        "values": []
+      }
+    ]
+  },
+  "extendedDescription": "<p class=\"product-description-title\">Технология производства</p><p class=\"product-description-text\">В смесителе замешивается вода, цемент, молотый кварцевый песок, тщательно размельченная известь и гипс, добавляется алюминиевая пудра в качестве газообразователя   – и смесь ячеистого бетона готова. В теплой влажной камере  смесь увеличивается в объеме (при этом образуется большое количество пор) и набирает первоначальную прочность, после этого застывшая до пластилинообразного состояния масса транспортируется к резательному оборудованию, где нарезается с высокой точностью на блоки. Нарезанный на блоки массив набирает окончательную прочность в автоклавной печи в условиях высокого давления водяного пара и при температуре около 184ºС. Применяемая технология производства дает возможность получить материал с заданными характеристиками по плотности и прочности.</p><p class=\"product-description-title\">Способ монтажа</p><ul class=\"product-description-list\"><li>Монтаж газобетонных блоков осуществляется на специальные клеевые составы.</li><li>Перед укладкой первого ряда блоков проводится проверка ровности основания, при необходимости осуществляется дополнительное выравнивание. Перед монтажом блоков следует установить временные направляющие (например деревянный брусок), к которым будет прислоняться монтируемая перегородка.Укладке первого ряда блоков следует уделять максимум внимания, т.к. ровная горизонтальная поверхность первого ряда блоков облегчит укладку последующих рядов. Клеевой состав наносится на стыковой и горизонтальный швы. </li><li>После укладки очередного ряда блоков обязательно выравнивается поверхность кладки с помощью специальной терки. Между соседними блоками не должно остаться перепадов уровня  – это может привести к образованию трещин. Второй и последующие ряды кладки следует вести со смещением вертикального шва на половину блока.</li><li>Если необходимо снизить передачу структурного шума от несущих конструкций к перегородке блоки не приклеиваются непосредственно к основанию и обрамляющим стенам, а устанавливаются на виброгасящую прокладку из пенополиэтилена, пенополистирола, пробки и т.п. В этом случае на пол приклеивается виброгасящая полоса, к полосе в свою очередь приклеивается перегородочный блок. Между блоком и существующей стеной прокладывается такая же виброизолирующая полоса, либо оставляется зазор, который в последующем заполняется, например, монтажной пеной. </li></ul>",
+  "extendedDescriptionNoHtml": [
+    {
+      "key": "Технология производства",
+      "value": "В смесителе замешивается вода, цемент, молотый кварцевый песок, тщательно размельченная известь и гипс, добавляется алюминиевая пудра в качестве газообразователя   – и смесь ячеистого бетона готова. В теплой влажной камере  смесь увеличивается в объеме (при этом образуется большое количество пор) и набирает первоначальную прочность, после этого застывшая до пластилинообразного состояния масса транспортируется к резательному оборудованию, где нарезается с высокой точностью на блоки. Нарезанный на блоки массив набирает окончательную прочность в автоклавной печи в условиях высокого давления водяного пара и при температуре около 184ºС. Применяемая технология производства дает возможность получить материал с заданными характеристиками по плотности и прочности.",
+      "values": []
+    },
+    {
+      "key": "Способ монтажа",
+      "value": "",
+      "values": [
+        "Монтаж газобетонных блоков осуществляется на специальные клеевые составы.",
+        "Перед укладкой первого ряда блоков проводится проверка ровности основания, при необходимости осуществляется дополнительное выравнивание. Перед монтажом блоков следует установить временные направляющие (например деревянный брусок), к которым будет прислоняться монтируемая перегородка.Укладке первого ряда блоков следует уделять максимум внимания, т.к. ровная горизонтальная поверхность первого ряда блоков облегчит укладку последующих рядов. Клеевой состав наносится на стыковой и горизонтальный швы. ",
+        "После укладки очередного ряда блоков обязательно выравнивается поверхность кладки с помощью специальной терки. Между соседними блоками не должно остаться перепадов уровня  – это может привести к образованию трещин. Второй и последующие ряды кладки следует вести со смещением вертикального шва на половину блока.",
+        "Если необходимо снизить передачу структурного шума от несущих конструкций к перегородке блоки не приклеиваются непосредственно к основанию и обрамляющим стенам, а устанавливаются на виброгасящую прокладку из пенополиэтилена, пенополистирола, пробки и т.п. В этом случае на пол приклеивается виброгасящая полоса, к полосе в свою очередь приклеивается перегородочный блок. Между блоком и существующей стеной прокладывается такая же виброизолирующая полоса, либо оставляется зазор, который в последующем заполняется, например, монтажной пеной. "
+      ]
+    }
+  ],
+  "certificates": [
+    {
+      "type": "Пожарный сертификат",
+      "files": [
+        {
+          "url": "//cs.p-static.ru/certificates/22767221.pdf",
+          "ext": "pdf"
+        }
+      ]
+    },
+    {
+      "type": "Сертификат соответствия",
+      "files": [
+        {
+          "url": "//cs.p-static.ru/certificates/59478140.pdf",
+          "ext": "pdf"
+        }
+      ]
+    }
+  ],
+  "certificatesDetailed": [
+    {
+      "guid": "340572bf-34d5-11ed-a2ba-00155dfcf00f",
+      "type": "Пожарный сертификат",
+      "code": "О00027607",
+      "registryLink": null,
+      "files": [
+        {
+          "url": "//cs.p-static.ru/certificates/22767221.pdf",
+          "ext": "pdf"
+        }
+      ]
+    },
+    {
+      "guid": "7b110ed4-6949-11f0-a2c4-00155d521e18",
+      "type": "Сертификат соответствия",
+      "code": "О00147137",
+      "registryLink": null,
+      "files": [
+        {
+          "url": "//cs.p-static.ru/certificates/59478140.pdf",
+          "ext": "pdf"
+        }
+      ]
+    }
+  ],
+  "instructions": null,
+  "instructionsAdditional": null,
+  "videos": null,
+  "volumeRatio": 1,
+  "calculatorComponents": [
+    {
+      "componentGuid": "61df62ca-399a-11e9-80c7-00155dfc0c4f",
+      "workGuid": "46978c9a-8d60-11ec-80d0-00155dfdd702"
+    },
+    {
+      "componentGuid": "61df62ca-399a-11e9-80c7-00155dfc0c4f",
+      "workGuid": "539173e1-8e72-11ec-80d0-00155dfdd702"
+    }
+  ],
+  "barcode": "2001618517261",
+  "link": "https://petrovich.ru/product/654059/?from=share_app",
+  "fastLinks": [
+    {
+      "url": "/catalog/6619/?brend=lsr",
+      "type": "brand_section",
+      "image": "//cs.p-static.ru/image/44817973/original.svg",
+      "title": "Газобетонные блоки ЛСР",
+      "description": "Стройматериалы / Стеновые и фасадные материалы / Строительные блоки / Газобетонные блоки / Газобетонные блоки ЛСР",
+      "navigation": {
+        "sectionCode": 6619,
+        "brandSlug": "lsr",
+        "filters": []
+      }
+    },
+    {
+      "url": "/catalog/6619/",
+      "type": "section",
+      "image": "//cs.p-static.ru/image/1669965/original.jpg",
+      "title": "Газобетонные блоки",
+      "description": "Стройматериалы",
+      "navigation": {
+        "sectionCode": 6619,
+        "brandSlug": null,
+        "filters": []
+      }
+    },
+    {
+      "url": "/brands/lsr/",
+      "type": "brand",
+      "image": "//cs.p-static.ru/image/44817973/original.svg",
+      "title": "ЛСР",
+      "description": "Бренд",
+      "navigation": {
+        "sectionCode": null,
+        "brandSlug": "lsr",
+        "filters": []
+      }
+    }
+  ],
+  "hasProductKitsWithoutActivity": false,
+  "hasProgramOfDeliveryOnTime": true,
+  "isRunning": false,
+  "liftingTariffGuid": "42d0a30f-2efc-11df-942d-0023543d7b52",
+  "externalId": 12129169,
+  "compressionRatio": 1,
+  "supplier": null,
+  "lastPriceDateTs": 1789171200
+}

@@ -2,16 +2,15 @@
 .env
 __pycache__/
 *.py[cod]
-*.db
-!data/products.db
 *.db-wal
 *.db-shm
 *.db.lock
+data/*.lock
 .DS_Store
 
-# Парсинг — локальные данные, не в git
-output/
-storage/
-data/*
-!data/products.db
-backups/
+# Сессии браузера и кэш. Для развёртывания не нужны, в публичный репозиторий не кладём.
+output/**/profile/
+output/**/browser_profile/
+output/**/cloak_profile/
+output/**/cloak_profile*/
+output/kontur_profile/

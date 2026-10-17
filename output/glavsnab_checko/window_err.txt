@@ -1,0 +1,8 @@
+Exception calling "ReadAllText" with "1" argument(s): "The process cannot access the file 'C:\Project\Parser\output\gla
+vsnab_checko\cache\7726344332.json' because it is being used by another process."
+At C:\Project\Parser\output\glavsnab_checko\progress_window.ps1:52 char:13
++             $raw = [System.IO.File]::ReadAllText($_.FullName)
++             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : IOException
+ 

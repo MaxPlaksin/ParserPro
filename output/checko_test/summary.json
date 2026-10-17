@@ -1,0 +1,153 @@
+[
+  {
+    "inn": "7707083893",
+    "source": "checko",
+    "ogrn": "1027700132195",
+    "name": "ПАО СБЕРБАНК",
+    "url": "https://checko.ru/company/pao-sberbank-1027700132195",
+    "revenue_year_1": null,
+    "revenue_value_1": null,
+    "revenue_year_2": null,
+    "revenue_value_2": null,
+    "revenue_change_percent": null,
+    "profit_year_1": null,
+    "profit_value_1": null,
+    "profit_year_2": null,
+    "profit_value_2": null,
+    "profit_change_percent": null,
+    "enforcement_total_count": 357,
+    "enforcement_active_count": 357,
+    "enforcement_total_amount": 34100000.0,
+    "arbitration_defendant_total_count": 6114,
+    "arbitration_defendant_active_count": 891,
+    "arbitration_defendant_total_amount": 26100000000.0,
+    "raw_data": {
+      "finances_by_year": {},
+      "defendant": {
+        "count": 6114,
+        "amount": 26100000000.0
+      },
+      "defendant_active": {
+        "count": 891,
+        "amount": 8100000000.0
+      },
+      "enforcement": {
+        "total_count": 357,
+        "active_count": 357,
+        "total_amount": 34100000.0,
+        "debt_amount": null
+      },
+      "identity": {
+        "name": "ПАО СБЕРБАНК",
+        "inn": "7707083893",
+        "ogrn": "1027700132195",
+        "url": "https://checko.ru/company/pao-sberbank-1027700132195"
+      }
+    },
+    "status": "ok"
+  },
+  {
+    "inn": "7736207543",
+    "source": "checko",
+    "ogrn": "1027700229193",
+    "name": "ООО \"ЯНДЕКС\"",
+    "url": "https://checko.ru/company/yandeks-1027700229193",
+    "revenue_year_1": 2023,
+    "revenue_value_1": 421987321000.0,
+    "revenue_year_2": 2024,
+    "revenue_value_2": 544581317000.0,
+    "revenue_change_percent": 29.05,
+    "profit_year_1": 2023,
+    "profit_value_1": -58454216000.0,
+    "profit_year_2": 2024,
+    "profit_value_2": -11681168000.0,
+    "profit_change_percent": 80.02,
+    "enforcement_total_count": 9,
+    "enforcement_active_count": 9,
+    "enforcement_total_amount": 1100000.0,
+    "arbitration_defendant_total_count": 242,
+    "arbitration_defendant_active_count": 36,
+    "arbitration_defendant_total_amount": 122900000.0,
+    "raw_data": {
+      "finances_by_year": {
+        "2011": {
+          "revenue": 21304687000.0,
+          "profit": 6562037000.0
+        },
+        "2012": {
+          "revenue": 30036863000.0,
+          "profit": 8946428000.0
+        },
+        "2013": {
+          "revenue": 40482711000.0,
+          "profit": 12931416000.0
+        },
+        "2014": {
+          "revenue": 51506039000.0,
+          "profit": 18720759000.0
+        },
+        "2015": {
+          "revenue": 60403117000.0,
+          "profit": 14884482000.0
+        },
+        "2016": {
+          "revenue": 71693127000.0,
+          "profit": 12113860000.0
+        },
+        "2017": {
+          "revenue": 86060430000.0,
+          "profit": 19014612000.0
+        },
+        "2018": {
+          "revenue": 104828078000.0,
+          "profit": 28241320000.0
+        },
+        "2019": {
+          "revenue": 123748248000.0,
+          "profit": 26516120000.0
+        },
+        "2020": {
+          "revenue": 132943553000.0,
+          "profit": 33654299000.0
+        },
+        "2021": {
+          "revenue": 209315648000.0,
+          "profit": 12495188000.0
+        },
+        "2022": {
+          "revenue": 301979022000.0,
+          "profit": 50313398000.0
+        },
+        "2023": {
+          "revenue": 421987321000.0,
+          "profit": -58454216000.0
+        },
+        "2024": {
+          "revenue": 544581317000.0,
+          "profit": -11681168000.0
+        }
+      },
+      "defendant": {
+        "count": 242,
+        "amount": 122900000.0
+      },
+      "defendant_active": {
+        "count": 36,
+        "amount": 25000000.0
+      },
+      "enforcement": {
+        "total_count": 9,
+        "active_count": 9,
+        "total_amount": 1100000.0,
+        "debt_amount": null
+      },
+      "identity": {
+        "name": "ООО \"ЯНДЕКС\"",
+        "inn": "7736207543",
+        "ogrn": "1027700229193",
+        "url": "https://checko.ru/company/yandeks-1027700229193"
+      }
+    },
+    "status": "ok"
+  }
+]
